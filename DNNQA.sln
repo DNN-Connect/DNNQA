@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNQA", "DNNQA.csproj", "{46920BAD-65EF-467C-A436-686097DEACF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNNQA.Tests", "Tests\DNNQA.Tests.csproj", "{CA5873C1-03B4-4A9A-8448-E9BC69628106}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46920BAD-65EF-467C-A436-686097DEACF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46920BAD-65EF-467C-A436-686097DEACF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46920BAD-65EF-467C-A436-686097DEACF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46920BAD-65EF-467C-A436-686097DEACF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5873C1-03B4-4A9A-8448-E9BC69628106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5873C1-03B4-4A9A-8448-E9BC69628106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5873C1-03B4-4A9A-8448-E9BC69628106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5873C1-03B4-4A9A-8448-E9BC69628106}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="VoteUpTitleQuestion.Text" xml:space="preserve">
+    <value>This question shows research effort; it is useful and clear.</value>
+  </data>
+  <data name="VoteDownTitleQuestion.Text" xml:space="preserve">
+    <value>This question does not show research effort; it is a duplicate or unclear.</value>
+  </data>
+  <data name="browse.Text" xml:space="preserve">
+    <value>browse</value>
+  </data>
+  <data name="Subscribe.Text" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="about.Text" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="Unsubscribe.Text" xml:space="preserve">
+    <value>Unsubscribe</value>
+  </data>
+  <data name="InvalidTag.Text" xml:space="preserve">
+    <value>The tag {0} is not available for selection, please use another tag or remove this one.</value>
+  </data>
+  <data name="VoteDownTitleAnswer.Text" xml:space="preserve">
+    <value>This answer is not useful</value>
+  </data>
+  <data name="VoteDownSelectedTitleAnswer.Text" xml:space="preserve">
+    <value>This answer is not useful (click again to undo)</value>
+  </data>
+  <data name="VoteDownSelectedTitleQuestion.Text" xml:space="preserve">
+    <value>This question does not show research effort; it is a duplicate or unclear (click again to undo)</value>
+  </data>
+  <data name="VoteUpTitleAnswer.Text" xml:space="preserve">
+    <value>This answer is useful</value>
+  </data>
+  <data name="VoteUpSelectedTitleAnswer.Text" xml:space="preserve">
+    <value>This answer is useful (click again to undo)</value>
+  </data>
+  <data name="VoteUpSelectedTitleQuestion.Text" xml:space="preserve">
+    <value>This question shows research effort; it is useful and clear (click again to undo)</value>
+  </data>
+  <data name="ContributeComment.Text" xml:space="preserve">
+    <value>Contribute Comment</value>
+  </data>
+  <data name="dayago.Text" xml:space="preserve">
+    <value> day ago</value>
+  </data>
+  <data name="daysago.Text" xml:space="preserve">
+    <value> days ago</value>
+  </data>
+  <data name="hourago.Text" xml:space="preserve">
+    <value> hour ago</value>
+  </data>
+  <data name="hoursago.Text" xml:space="preserve">
+    <value> hours ago</value>
+  </data>
+  <data name="minuteago.Text" xml:space="preserve">
+    <value> minute ago</value>
+  </data>
+  <data name="minutesago.Text" xml:space="preserve">
+    <value> minutes ago</value>
+  </data>
+  <data name="monthago.Text" xml:space="preserve">
+    <value> month ago</value>
+  </data>
+  <data name="secondsago.Text" xml:space="preserve">
+    <value> seconds ago</value>
+  </data>
+  <data name="Priv_ApproveTagEdits.Text" xml:space="preserve">
+    <value>approve tag edits</value>
+  </data>
+  <data name="Priv_ApproveTagEdits_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Priv_CloseQuestion.Text" xml:space="preserve">
+    <value>cast close/reopen questions</value>
+  </data>
+  <data name="Priv_CloseQuestion_Desc.Text" xml:space="preserve">
+    <value>Closing a question restricts it from futher answers and comments and is similar to down-voting. </value>
+  </data>
+  <data name="Priv_CommentEverywhere.Text" xml:space="preserve">
+    <value>comment everywhere</value>
+  </data>
+  <data name="Priv_CommentEverywhere_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;Comments are notes left on a question or answer. Comments do not generate reputation, there's no revision history and when they are deleted they're gone for good. Comments are a way to clarify something that may have not been clear in your question or answer OR a way for another user to ask for clarification in your question or answer.&lt;/p&gt;&lt;p&gt;Please note that you can always comment on your own posts once you have been granted the 'remove new user status' privilege. However, commenting on others people's posts is what this privilege grants.&lt;/p&gt;</value>
+  </data>
+  <data name="Priv_EditQuestionsAndAnswers.Text" xml:space="preserve">
+    <value>edit questions &amp; answers</value>
+  </data>
+  <data name="Priv_EditQuestionsAndAnswers_Desc.Text" xml:space="preserve">
+    <value>Users can edit their own questions and answers once they have been granted the 'remove new user status' privilege. However, in order to be able to edit the questions and answers submitted by other users you must be granted this privilege level.&lt;/p&gt;&lt;strong&gt;When to edit?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Any time the question or answer can be made better, this includes:&lt;ul&gt;&lt;li&gt;correct spelling&lt;/li&gt;&lt;li&gt;clarify the meaning of the post without changing it&lt;/li&gt;&lt;li&gt;to correct minor mistakes or add addendums / updates as the post ages&lt;/li&gt;&lt;li&gt;try to make the post substantively better when you edit, not just change a single character. Tiny, trivial edits are discouraged.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;strong&gt;What happens on post edit?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;When a post is edited, the content is immediately updated. A version of the previous post content is saved in the database too but is not available to be viewed in the user interface.&lt;/p&gt;.</value>
+  </data>
+  <data name="Priv_Flag.Text" xml:space="preserve">
+    <value>flag posts</value>
+  </data>
+  <data name="Priv_Flag_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;Flagging a post is a way of brining inappropriate content to the attention of the community. When a post is flagged a certain number of times, it no longer will display in the list of questions or answers on the site.&lt;/p&gt;&lt;strong&gt;When should I flag?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;If question or answer makes you feel uncomfortable please flag it and bring it to our attention! If a post is a duplicate, you should flag it too (you may wish to reference the original question by editing the post or adding a comment).&lt;/p&gt;&lt;strong&gt;How do I flag?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Once logged in, you can flag posts by clicking the 'flag' link next to any question or answer once you have achieved this privilege level. This link will also show the number of times user's have flagged the individual post.&lt;/p&gt;&lt;strong&gt;What happens on flagging?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Once a question has been flagged a certain number of times (3), it will no longer be displayed on the 'home' view of questions. Once it reaches 6 times, the question will no longer be displayed anywhere in the module (as if it were deleted). At this time, the post author will loose some reputation points too.&lt;/p&gt;.</value>
+  </data>
+  <data name="Priv_ModeratorTools.Text" xml:space="preserve">
+    <value>access to moderator tools</value>
+  </data>
+  <data name="Priv_ModeratorTools_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Priv_ProtectQuestions.Text" xml:space="preserve">
+    <value>protect questions</value>
+  </data>
+  <data name="Priv_ProtectQuestions_Desc.Text" xml:space="preserve">
+    <value>&lt;strong&gt;What are protected questions?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;A protected question prevents any further answers and also locks them from edits.&lt;/p&gt;</value>
+  </data>
+  <data name="Priv_RetagQuestion.Text" xml:space="preserve">
+    <value>retag questions</value>
+  </data>
+  <data name="Priv_RetagQuestion_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;Each question must be associated with at least one tag when the author creates it. However, once the tags are set they can only be changed by the original post author or other users with this privilege level (meaning besides the question author, only users who have achieved this privilege level are permitted to retrag the question). To retag a question, simply edit it (this will only be available to you once you gained this privilege).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Users will only be able to retag the question at this privilege level, they will not be able to edit the actual question unless it is their own or they have been granted the 'edit questions &amp; answers' privilege.&lt;/p&gt;</value>
+  </data>
+  <data name="Priv_Trusted.Text" xml:space="preserve">
+    <value>trusted user</value>
+  </data>
+  <data name="Priv_Trusted_Desc.Text" xml:space="preserve">
+    <value>&lt;strong&gt;What are trusted users?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Trusted users are allowed to perform trusted actions, including: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Voting to delete answers with score of -1 or lower&lt;/li&gt;&lt;li&gt;Voting to delete questions immediately after they are closed (even if they are new)&lt;/li&gt;&lt;li&gt;Editing all tags on the site&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="Priv_VoteDown.Text" xml:space="preserve">
+    <value>vote down</value>
+  </data>
+  <data name="Priv_VoteDown_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;Voting down is how the community indicates which questions and answers are least useful.&lt;/p&gt;&lt;strong&gt;When should I vote down?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Use your down-votes whenever you encounter an no-effort-expended post or an answer that is clearly incorrect.&lt;/p&gt;&lt;p&gt;You have a limited number of votes per day, and answer down-votes cost you a little bit of reputation on top of that, so use them wisely. Keep in mind, you should flag inappropriate and/or spam content and NOT down-vote it (why waste your reputation?)&lt;/p&gt;&lt;strong&gt;What happens on a down-vote?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;When a post is down-voted, the author of the post receives a -2 in reputation. Also, the user down-voting receives a -1 in reputation if the post is an answer and no change if the post is a question.&lt;/p&gt;&lt;strong&gt;Down-voting alternatives?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;If a post is spam, offensive or a duplicate, please flag it. If something is wrong, please use comments or edit the post.&lt;/p&gt;</value>
+  </data>
+  <data name="Priv_VoteUp.Text" xml:space="preserve">
+    <value>vote up</value>
+  </data>
+  <data name="Priv_VoteUp_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;Voting up is how the community indicates which questions and answers are most useful and appropriate.&lt;/p&gt;&lt;strong&gt;When should I vote up?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Whenever you encounter a question or answer that you feel is especially useful, vote it up! You have a limited number of votes per day, so use them wisely.&lt;/p&gt;&lt;strong&gt;How do I vote up?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;Users can up vote a question or answer by clicking the 'vote up' button located next to the total votes score on any question or answer. Please note: users cannot up-vote their own posts (questions or answers).&lt;/p&gt;&lt;strong&gt;What happens on an up-vote?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;If a question is up-voted, the author of the question receives a +5 in reputation. When an answer is up-voted, the author of the answer receives a +10 in reputation.&lt;/p&gt;.</value>
+  </data>
+  <data name="Score_ApprovedPostEdit.Text" xml:space="preserve">
+    <value>approved post edit</value>
+  </data>
+  <data name="Score_ApprovedPostEdit_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_ApprovedTagEdit.Text" xml:space="preserve">
+    <value>approved tag edit</value>
+  </data>
+  <data name="Score_ApprovedTagEdit_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_AskedFlaggedQuestion.Text" xml:space="preserve">
+    <value>asked flagged question</value>
+  </data>
+  <data name="Score_AskedFlaggedQuestion_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_AskedQuestion.Text" xml:space="preserve">
+    <value>asked question</value>
+  </data>
+  <data name="Score_AskedQuestionVotedDown.Text" xml:space="preserve">
+    <value>asked question voted down</value>
+  </data>
+  <data name="Score_AskedQuestionVotedDown_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_AskedQuestionVotedUp.Text" xml:space="preserve">
+    <value>asked question voted up</value>
+  </data>
+  <data name="Score_AskedQuestionVotedUp_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_AskedQuestion_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_Commented.Text" xml:space="preserve">
+    <value>commented</value>
+  </data>
+  <data name="Score_Commented_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_EditedPost.Text" xml:space="preserve">
+    <value>edited post</value>
+  </data>
+  <data name="Score_EditedPost_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_EditedTag.Text" xml:space="preserve">
+    <value>edited tag</value>
+  </data>
+  <data name="Score_EditedTagVotedDown.Text" xml:space="preserve">
+    <value>edited tag voted down</value>
+  </data>
+  <data name="Score_EditedTagVotedDown_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_EditedTagVotedUp.Text" xml:space="preserve">
+    <value>edited tag voted down</value>
+  </data>
+  <data name="Score_EditedTagVotedUp_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_EditedTag_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_ProvidedAcceptedAnswer.Text" xml:space="preserve">
+    <value>provided accepted answer</value>
+  </data>
+  <data name="Score_ProvidedAcceptedAnswer_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_ProvidedAnswer.Text" xml:space="preserve">
+    <value>provided answer</value>
+  </data>
+  <data name="Score_ProvidedAnswerVotedDown.Text" xml:space="preserve">
+    <value>provided answer voted down</value>
+  </data>
+  <data name="Score_ProvidedAnswerVotedDown_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_ProvidedAnswerVotedUp.Text" xml:space="preserve">
+    <value>provided answer voted up</value>
+  </data>
+  <data name="Score_ProvidedAnswerVotedUp_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_ProvidedAnswer_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_VotedDownAnswer.Text" xml:space="preserve">
+    <value>voted down answer</value>
+  </data>
+  <data name="Score_VotedDownAnswer_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_VotedDownQuestion.Text" xml:space="preserve">
+    <value>voted down question</value>
+  </data>
+  <data name="Score_VotedDownQuestion_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_VotedTagDown.Text" xml:space="preserve">
+    <value>voted tag down</value>
+  </data>
+  <data name="Score_VotedTagDown_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_VotedTagUp.Text" xml:space="preserve">
+    <value>voted tag up</value>
+  </data>
+  <data name="Score_VotedTagUp_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_VotedUpAnswer.Text" xml:space="preserve">
+    <value>voted up answer</value>
+  </data>
+  <data name="Score_VotedUpAnswer_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Score_VotedUpQuestion.Text" xml:space="preserve">
+    <value>voted up question</value>
+  </data>
+  <data name="Score_VotedUpQuestion_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="history.Text" xml:space="preserve">
+    <value>history</value>
+  </data>
+  <data name="Priv_ViewAll.Text" xml:space="preserve">
+    <value>All Q&amp;A Privileges</value>
+  </data>
+  <data name="Priv_ViewAll_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;When your create questions and answers, you generate &lt;b&gt;reputation&lt;/b&gt;. When other user's up-vote your questions or accept your answers, you also generate reputation (in addition to other actions).&lt;/p&gt;&lt;p&gt;Reputation is a rough measure of: &lt;ul&gt;&lt;li&gt;How much the community trusts you&lt;/li&gt;&lt;li&gt;Your communication skills&lt;/li&gt;&lt;li&gt;The quality and relevancy of your questions and answers&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;As you earn reputation from your peers, you earn the community's trust - and will be granted additional privileges on the site. The complete list of privileges is listed on the right, in descending order. The most basic privileges are at the top; the most advanced at the bottom.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Click on any privilege&lt;/strong&gt;, to the right, to learn more about it.&lt;/p&gt;</value>
+  </data>
+  <data name="Priv_CreatePost.Text" xml:space="preserve">
+    <value>create post</value>
+  </data>
+  <data name="Priv_CreatePost_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;Means you can ask a question or provide an answer to an existing question. This privilege is granted to any user who has logged into the site and viewed the module while logged in, thus any person who is logged in can ask a question or answer one. &lt;/p&gt;</value>
+  </data>
+  <data name="VoteDown.Text" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="VoteUp.Text" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="monthsago.Text" xml:space="preserve">
+    <value> months ago</value>
+  </data>
+  <data name="weekago.Text" xml:space="preserve">
+    <value> week ago</value>
+  </data>
+  <data name="weeksago.Text" xml:space="preserve">
+    <value> weeks ago</value>
+  </data>
+  <data name="AcceptedAnswer.Text" xml:space="preserve">
+    <value>This question has an answer that was accepted by the original question author.</value>
+  </data>
+  <data name="imgAccepted.Text" xml:space="preserve">
+    <value>Accepted Answer</value>
+  </data>
+  <data name="VoteDownTitleSynonym.Text" xml:space="preserve">
+    <value>This synonym should not be associated with the term.</value>
+  </data>
+  <data name="VoteUpTitleSynonym.Text" xml:space="preserve">
+    <value>This synonym should be associated with the term.</value>
+  </data>
+  <data name="VoteDownSelectedTitleSynonym.Text" xml:space="preserve">
+    <value>This synonym should not be associated with the term (click again to undo)</value>
+  </data>
+  <data name="VoteUpSelectedTitleSynonym.Text" xml:space="preserve">
+    <value>This synonym should be associated with the term (click again to undo)</value>
+  </data>
+  <data name="Priv_CreateTagSynonym.Text" xml:space="preserve">
+    <value>create tag synonyms</value>
+  </data>
+  <data name="Priv_CreateTagSynonym_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;Tag synonyms allow us to fix incorrect tags by associating them with the correct ones.  For example, if a user misspells a tag a synonym with the proper spelling can be associated so it can be easily found. User's with the 'create tag synonym' privilege are permitted to create, in addition to up-vote and down-vote, tag synonms from a tag's detail description page.&lt;/p&gt;&lt;strong&gt;When to create a synonym?&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;&lt;p&gt;User's should suggest tag synonyms for several reasons including abbreviations (DotNetNuke and DNN) and a different spelling of the same thing (c# and c-sharp).&lt;/p&gt;</value>
+  </data>
+  <data name="questions.Text" xml:space="preserve">
+    <value> questions</value>
+  </data>
+  <data name="Tag.Text" xml:space="preserve">
+    <value>Term: </value>
+  </data>
+  <data name="improve.Text" xml:space="preserve">
+    <value>improve description</value>
+  </data>
+  <data name="AddComment.Text" xml:space="preserve">
+    <value>Add Comment</value>
+  </data>
+  <data name="CommentHeader.Text" xml:space="preserve">
+    <value>add comment</value>
+  </data>
+  <data name="Priv_RemoveNewUser.Text" xml:space="preserve">
+    <value>remove new user status</value>
+  </data>
+  <data name="Priv_RemoveNewUser_Desc.Text" xml:space="preserve">
+    <value>&lt;p&gt;To safeguard the community from spammers and “bots”, new users need to achieve trust so they can post freely and often. Users achieve a level of trust by creating questions and answers that are NOT flagged. If the questions or answers are up-voted (or an answer is marked as accepted), the user receives even more reputation points thus coming closer to achieveing a level of trust.&lt;/p&gt;&lt;strong&gt;What can new users not do? &lt;/strong&gt;&lt;p&gt;In addition to any higher level privilegs, new users cannot:&lt;ul&gt;&lt;li&gt;Cannot post multiple questions or answers within a small time frame&lt;/li&gt;&lt;li&gt;Cannot edit their own posts&lt;/li&gt;&lt;li&gt;Cannot comment on their own posts&lt;/li&gt;&lt;li&gt;Cannot edit tag descriptions&lt;/li&gt;&lt;li&gt;Cannot answer their own questions&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="NoDownVotePrivs.Text" xml:space="preserve">
+    <value>You have not yet been granted the privilege for down-voting.</value>
+  </data>
+  <data name="NoUpVotePrivs.Text" xml:space="preserve">
+    <value>You have not yet been granted the privilege for up-voting.</value>
+  </data>
+  <data name="VoteOwnPost.Text" xml:space="preserve">
+    <value>Users are not permitted to vote on their own questions or answers.</value>
+  </data>
+  <data name="VoteOwnSynonym.Text" xml:space="preserve">
+    <value>Users are not permitted to vote on synonyms they suggested.</value>
+  </data>
+  <data name="ReputationScore.Text" xml:space="preserve">
+    <value>reputation score</value>
+  </data>
+  <data name="InvalidBody.Text" xml:space="preserve">
+    <value>In an effort to provide some value in each question or answer, all questions/answers must contain a minimum of {0} characters.</value>
+  </data>
+  <data name="ApprovedPostEdit.Text" xml:space="preserve">
+    <value>approving an edited post</value>
+  </data>
+  <data name="ApprovedTagEdit.Text" xml:space="preserve">
+    <value>approving an edited tag</value>
+  </data>
+  <data name="AskedQuestion.Text" xml:space="preserve">
+    <value>asking a question</value>
+  </data>
+  <data name="AskedQuestionVotedUp.Text" xml:space="preserve">
+    <value>asking an up-voted question</value>
+  </data>
+  <data name="Commented.Text" xml:space="preserve">
+    <value>commenting on a post</value>
+  </data>
+  <data name="CreatedTagSynonym.Text" xml:space="preserve">
+    <value>creating a tag synonym</value>
+  </data>
+  <data name="EditedPost.Text" xml:space="preserve">
+    <value>editing a post</value>
+  </data>
+  <data name="EditedTag.Text" xml:space="preserve">
+    <value>editing a tag</value>
+  </data>
+  <data name="EditedTagVotedUp.Text" xml:space="preserve">
+    <value>editing an up-voted tag revision</value>
+  </data>
+  <data name="FirstLoggedInView.Text" xml:space="preserve">
+    <value>first logged-in visit</value>
+  </data>
+  <data name="ProvidedAcceptedAnswer.Text" xml:space="preserve">
+    <value>providing an accepted answer</value>
+  </data>
+  <data name="ProvidedAnswer.Text" xml:space="preserve">
+    <value>providing an answer</value>
+  </data>
+  <data name="ProvidedAnswerVotedUp.Text" xml:space="preserve">
+    <value>providing an up-voted answer</value>
+  </data>
+  <data name="VotedSynonymUp.Text" xml:space="preserve">
+    <value>up-voting a tag synonym</value>
+  </data>
+  <data name="VotedTagUp.Text" xml:space="preserve">
+    <value>up-voting a tag revision</value>
+  </data>
+  <data name="VotedUpAnswer.Text" xml:space="preserve">
+    <value>up-voting an answer</value>
+  </data>
+  <data name="VotedUpQuestion.Text" xml:space="preserve">
+    <value>up-voting a question</value>
+  </data>
+  <data name="QuestionUrlName.Text" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="TagUrlName.Text" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="Score_AcceptedQuestionAnswer.Text" xml:space="preserve">
+    <value>accepted question answer</value>
+  </data>
+  <data name="Score_AcceptedQuestionAnswer_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AcceptedQuestionAnswer.Text" xml:space="preserve">
+    <value>accepting an answer to a question</value>
+  </data>
+  <data name="Score_OfferedBounty.Text" xml:space="preserve">
+    <value>offered bounty</value>
+  </data>
+  <data name="Score_OfferedBounty_Desc.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Badge_FirstPostEdit.Text" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Badge_FirstPostEdit_Desc.Text" xml:space="preserve">
+    <value>Edited a Q&amp;A post</value>
+  </data>
+  <data name="Tier_Bronze.Text" xml:space="preserve">
+    <value>Bronze Badge</value>
+  </data>
+  <data name="Tier_Bronze_Desc.Text" xml:space="preserve">
+    <value>Bronze badges are easy to earn if you use the Q&amp;A module.</value>
+  </data>
+  <data name="Tier_Gold.Text" xml:space="preserve">
+    <value>Gold Badge</value>
+  </data>
+  <data name="Tier_Gold_Desc.Text" xml:space="preserve">
+    <value>Gold badges are the most rare and recipients have earned some bragging rights. </value>
+  </data>
+  <data name="Tier_Silver.Text" xml:space="preserve">
+    <value>Silver Badge</value>
+  </data>
+  <data name="Tier_Silver_Desc.Text" xml:space="preserve">
+    <value>Silver badges are awarded for actions that take time.</value>
+  </data>
+  <data name="Badge_FirstAcceptedAnswer.Text" xml:space="preserve">
+    <value>Arrived</value>
+  </data>
+  <data name="Badge_FirstAcceptedAnswer_Desc.Text" xml:space="preserve">
+    <value>First accepted answer</value>
+  </data>
+  <data name="EarnedBadge.Text" xml:space="preserve">
+    <value>you've earned this badge</value>
+  </data>
+  <data name="TierTitle_Bronze.Text" xml:space="preserve">
+    <value>bronze badge: </value>
+  </data>
+  <data name="TierTitle_Gold.Text" xml:space="preserve">
+    <value>gold badge: </value>
+  </data>
+  <data name="TierTitle_Silver.Text" xml:space="preserve">
+    <value>silver badge: </value>
+  </data>
+  <data name="AskedFlaggedQuestion.Text" xml:space="preserve">
+    <value>asking a flagged question</value>
+  </data>
+  <data name="AskedQuestionVotedDown.Text" xml:space="preserve">
+    <value>asking a down-voted question</value>
+  </data>
+  <data name="EditedTagVotedDown.Text" xml:space="preserve">
+    <value>editing a down-voted tag revision</value>
+  </data>
+  <data name="ProvidedAnswerVotedDown.Text" xml:space="preserve">
+    <value>providing a down-voted answer</value>
+  </data>
+  <data name="ProvidedFlaggedAnswer.Text" xml:space="preserve">
+    <value>providing a flagged answer</value>
+  </data>
+  <data name="VotedDownAnswer.Text" xml:space="preserve">
+    <value>down-voting an answer</value>
+  </data>
+  <data name="VotedDownQuestion.Text" xml:space="preserve">
+    <value>down-voting a question</value>
+  </data>
+  <data name="VotedSynonymDown.Text" xml:space="preserve">
+    <value>down-voting a tag synonym</value>
+  </data>
+  <data name="VotedTagDown.Text" xml:space="preserve">
+    <value>down-voting a tag</value>
+  </data>
+</root>

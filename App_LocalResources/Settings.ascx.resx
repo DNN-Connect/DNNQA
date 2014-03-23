@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName.Text" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="dnnlblEnableRSS.Help" xml:space="preserve">
+    <value>If checked, RSS feeds will be enabled.</value>
+  </data>
+  <data name="dnnlblEnableRSS.Text" xml:space="preserve">
+    <value>Enable RSS</value>
+  </data>
+  <data name="dnnlblNameFormat.Help" xml:space="preserve">
+    <value>The format used when displaying post author/editor names throughout the module.</value>
+  </data>
+  <data name="dnnlblNameFormat.Text" xml:space="preserve">
+    <value>Name Format</value>
+  </data>
+  <data name="dnnlblHomePageSize.Help" xml:space="preserve">
+    <value>The maximum number of questions to display in the home view of the module. </value>
+  </data>
+  <data name="dnnlblHomePageSize.Text" xml:space="preserve">
+    <value>'Home' Questions Count</value>
+  </data>
+  <data name="Username.Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="ControlTitle_settings.Text" xml:space="preserve">
+    <value>Q &amp; A</value>
+  </data>
+  <data name="dnnlblAutoApprove.Help" xml:space="preserve">
+    <value>If checked, all questions and answers will be auto approved (this is enabled by default and the recommended configuration for this module). </value>
+  </data>
+  <data name="dnnlblAutoApprove.Text" xml:space="preserve">
+    <value>Auto Approve</value>
+  </data>
+  <data name="dnnlblAnswerPageSize.Help" xml:space="preserve">
+    <value>The maximum number of records to display for answers in a single page. This setting also determines if a user will be require an extra step to see the Answer input area.</value>
+  </data>
+  <data name="dnnlblAnswerPageSize.Text" xml:space="preserve">
+    <value>'Question' Answers Count</value>
+  </data>
+  <data name="dnnlblFromEmail.Help" xml:space="preserve">
+    <value>The "From" email address on all outgoing emails from this module.</value>
+  </data>
+  <data name="dnnlblFromEmail.Text" xml:space="preserve">
+    <value>From Email Address</value>
+  </data>
+  <data name="dnnlblMaxTags.Help" xml:space="preserve">
+    <value>The maximum number of terms that can be associated with a question. The minimum is 1.</value>
+  </data>
+  <data name="dnnlblMaxTags.Text" xml:space="preserve">
+    <value>Maximum Question Tags</value>
+  </data>
+  <data name="dnnlblMinBodyChars.Help" xml:space="preserve">
+    <value>The minimum number of characters required for a question or answer body of content.</value>
+  </data>
+  <data name="dnnlblMinBodyChars.Text" xml:space="preserve">
+    <value>Minimum Body Characters</value>
+  </data>
+  <data name="dnnlblMinTitleChars.Help" xml:space="preserve">
+    <value>The minimum number of characters required for a question title.</value>
+  </data>
+  <data name="dnnlblMinTitleChars.Text" xml:space="preserve">
+    <value>Minimum Title Characters</value>
+  </data>
+  <data name="dnnlblTagHistory.Help" xml:space="preserve">
+    <value>The maximum number of revisions that are stored for a tag, going above this number will remove the oldest record for a specific tag.</value>
+  </data>
+  <data name="dnnlblTagHistory.Text" xml:space="preserve">
+    <value>Maximum Term Revisions</value>
+  </data>
+  <data name="dnnlblDailyFlags.Help" xml:space="preserve">
+    <value>The number of posts a user can flag for moderator attention on any given day.</value>
+  </data>
+  <data name="dnnlblDailyFlags.Text" xml:space="preserve">
+    <value>Per User Moderator Flags (Daily)</value>
+  </data>
+  <data name="dnnlblEditOwn.Help" xml:space="preserve">
+    <value>The number of posts (questions &amp; answers combined) a user must have to edit their own posts.</value>
+  </data>
+  <data name="dnnlblEditOwn.Text" xml:space="preserve">
+    <value>Self Post Edit Threshold</value>
+  </data>
+  <data name="EmailSettings.Text" xml:space="preserve">
+    <value>Email Settings</value>
+  </data>
+  <data name="ThresholdSettings.Text" xml:space="preserve">
+    <value>Operational Thresholds</value>
+  </data>
+  <data name="dnnlblHomeTagSize.Help" xml:space="preserve">
+    <value>The maximum number of terms to display on the home page view of the module. </value>
+  </data>
+  <data name="dnnlblHomeTagSize.Text" xml:space="preserve">
+    <value>'Home' Terms Count</value>
+  </data>
+  <data name="UISettings.Text" xml:space="preserve">
+    <value>User Interface</value>
+  </data>
+  <data name="dnnlblMaxTagsTags.Help" xml:space="preserve">
+    <value>The maximum number of tags to display on the tags page in this module. </value>
+  </data>
+  <data name="dnnlblMaxTagsTags.Text" xml:space="preserve">
+    <value>'Tags' Tag Count</value>
+  </data>
+  <data name="AskQuestionSettings.Text" xml:space="preserve">
+    <value>Ask Question Settings</value>
+  </data>
+  <data name="dnnlblFPSC.Help" xml:space="preserve">
+    <value>The number of flags, dedicated to spam, each user receives daily (this is reset every 24 hours).</value>
+  </data>
+  <data name="dnnlblFPSC.Text" xml:space="preserve">
+    <value>Daily User Spam Votes</value>
+  </data>
+  <data name="dnnlblPCVWM.Help" xml:space="preserve">
+    <value>The length of time allotted for the end user to change their vote on a specific post.</value>
+  </data>
+  <data name="dnnlblPCVWM.Text" xml:space="preserve">
+    <value>Post Vote Change Window (mins)</value>
+  </data>
+  <data name="dnnlblPFCC.Help" xml:space="preserve">
+    <value>The number of flags a post must receive before it is 'removed' from the user interface (for normal users).</value>
+  </data>
+  <data name="dnnlblPFCC.Text" xml:space="preserve">
+    <value>Post Flag Limit</value>
+  </data>
+  <data name="dnnlblPFWH.Help" xml:space="preserve">
+    <value>The number of hours allowed for user's to flag a post (starts when the first flag is submitted, resets each additional flag vote).</value>
+  </data>
+  <data name="dnnlblPFWH.Text" xml:space="preserve">
+    <value>Post Flag Window (hours)</value>
+  </data>
+  <data name="dnnlblQCCVC.Help" xml:space="preserve">
+    <value>This is the number of 'close question' votes a question must receive in order to become closed. This action can only be performed by moderators and users with the proper reputation level.</value>
+  </data>
+  <data name="dnnlblQCCVC.Text" xml:space="preserve">
+    <value>Close Question Votes</value>
+  </data>
+  <data name="dnnlblQCWD.Help" xml:space="preserve">
+    <value>The time allotted for a question to be closed (via voting, in days). This time resets based on the latest vote.</value>
+  </data>
+  <data name="dnnlblQCWD.Text" xml:space="preserve">
+    <value>Close Question Window (days)</value>
+  </data>
+  <data name="dnnlblQFHRC.Help" xml:space="preserve">
+    <value>The number of times a question must be flagged before it is removed from the home page display (of the module).</value>
+  </data>
+  <data name="dnnlblQFHRC.Text" xml:space="preserve">
+    <value>Flagged Question Home Removal</value>
+  </data>
+  <data name="dnnlblTCWD.Help" xml:space="preserve">
+    <value>The number of days permitted for closing a tag.</value>
+  </data>
+  <data name="dnnlblTCWD.Text" xml:space="preserve">
+    <value>Close Term Window (days)</value>
+  </data>
+  <data name="dnnlblTFCC.Help" xml:space="preserve">
+    <value>The number of flags a tag must receive before it is rejected. </value>
+  </data>
+  <data name="dnnlblTFCC.Text" xml:space="preserve">
+    <value>Term Flag Limit</value>
+  </data>
+  <data name="dnnlblTFWH.Help" xml:space="preserve">
+    <value>The number of hours permitted for user's to flag a tag for removal (starts when the first flag is submitted, resets each additional vote).</value>
+  </data>
+  <data name="dnnlblTFWH.Text" xml:space="preserve">
+    <value>Term Flag Window (hours)</value>
+  </data>
+  <data name="dnnlblTSAC.Help" xml:space="preserve">
+    <value>The number of up-votes a synonym must receive in order to be associated with the master term (then automatic replacement occurs).</value>
+  </data>
+  <data name="dnnlblTSAC.Text" xml:space="preserve">
+    <value>Synonym Approve Count</value>
+  </data>
+  <data name="dnnlblTSMC.Help" xml:space="preserve">
+    <value>The maximum number of synonyms that can be related to a single term.</value>
+  </data>
+  <data name="dnnlblTSMC.Text" xml:space="preserve">
+    <value>Maximum Synonym Count</value>
+  </data>
+  <data name="dnnlblTSRC.Help" xml:space="preserve">
+    <value>The number of down-votes a synonym must receive before it is rejected.</value>
+  </data>
+  <data name="dnnlblTSRC.Text" xml:space="preserve">
+    <value>Synonym Reject Count</value>
+  </data>
+  <data name="dnnlblUCVC.Help" xml:space="preserve">
+    <value>The number of closing votes a user is permitted to cast daily (this is reset every 24 hours).</value>
+  </data>
+  <data name="dnnlblUCVC.Text" xml:space="preserve">
+    <value>Daily User Close Votes</value>
+  </data>
+  <data name="dnnlblUFPMC.Help" xml:space="preserve">
+    <value>The number of flags each user receives daily (this is reset every 24 hours).</value>
+  </data>
+  <data name="dnnlblUFPMC.Text" xml:space="preserve">
+    <value>Daily User Post Flags</value>
+  </data>
+  <data name="dnnlblUTSCMAC.Help" xml:space="preserve">
+    <value>The minimum number of answers a user must provide (associated w/ the master term) to be permitted to create a term synonym (assuming they have the privilege to do so).</value>
+  </data>
+  <data name="dnnlblUTSCMAC.Text" xml:space="preserve">
+    <value>Create Synonym Minimum Answers</value>
+  </data>
+  <data name="dnnlblUTSVMASC.Help" xml:space="preserve">
+    <value>The minimum number of answers a user must provide (associated w/ the master term) in order to vote on a synonym's approval (assuming they have the privilege to do so).</value>
+  </data>
+  <data name="dnnlblUTSVMASC.Text" xml:space="preserve">
+    <value>Vote on Synonym Minimum Answers</value>
+  </data>
+  <data name="dnnlblUUVAC.Help" xml:space="preserve">
+    <value>The number of up-votes a user can cast daily on answers (this is reset every 24 hours).</value>
+  </data>
+  <data name="dnnlblUUVAC.Text" xml:space="preserve">
+    <value>Daily User Answer Up-votes</value>
+  </data>
+  <data name="dnnlblUUVQC.Help" xml:space="preserve">
+    <value>The number of up-votes a user can cast daily on questions (this is reset every 24 hours).</value>
+  </data>
+  <data name="dnnlblUUVQC.Text" xml:space="preserve">
+    <value>Daily User Question Up-votes</value>
+  </data>
+  <data name="dnnlblVocabRoot.Help" xml:space="preserve">
+    <value>The vocabulary root used for your folksonomy. Currently, this is forced to be 'Tags'. </value>
+  </data>
+  <data name="dnnlblVocabRoot.Text" xml:space="preserve">
+    <value>Vocabulary Root</value>
+  </data>
+  <data name="DailyUsage.Text" xml:space="preserve">
+    <value>Daily Usage</value>
+  </data>
+  <data name="dnnlblHomeTagUsageType.Help" xml:space="preserve">
+    <value>This setting determines what count should be displayed next to each tag in the 'Recent Tags' list. This count represents the number of questions associated with the tag based on the selected time frame (daily, weekly, monthly, total).</value>
+  </data>
+  <data name="dnnlblHomeTagUsageType.Text" xml:space="preserve">
+    <value>'Home' Recent Tags Time Frame</value>
+  </data>
+  <data name="MonthlyUsage.Text" xml:space="preserve">
+    <value>Monthly Usage</value>
+  </data>
+  <data name="TotalUsage.Text" xml:space="preserve">
+    <value>Total Usage</value>
+  </data>
+  <data name="WeeklyUsage.Text" xml:space="preserve">
+    <value>Weekly Usage</value>
+  </data>
+  <data name="dnnlblBrowseQPageSize.Help" xml:space="preserve">
+    <value>The number of questions to display in the browse page (this is the search results, my questions, and my answers views).</value>
+  </data>
+  <data name="dnnlblBrowseQPageSize.Text" xml:space="preserve">
+    <value>'Browse' Questions Count</value>
+  </data>
+  <data name="dnnlblQuestionEmailTemplate.Help" xml:space="preserve">
+    <value>This is the email template used for single question emails. Summary emails (ie. multiple questions) use a different template. </value>
+  </data>
+  <data name="dnnlblQuestionEmailTemplate.Text" xml:space="preserve">
+    <value>Question Email Template</value>
+  </data>
+  <data name="dnnlblSummaryEmailTemplate.Help" xml:space="preserve">
+    <value>This is the email template used for tag summary emails. Summary emails (ie. multiple questions) use a different template.</value>
+  </data>
+  <data name="dnnlblSummaryEmailTemplate.Text" xml:space="preserve">
+    <value>Summary Email Template</value>
+  </data>
+  <data name="dnnlblAnswerEmailTemplate.Help" xml:space="preserve">
+    <value>This is the email template used for sending out notification about a new answer in response to a question. (NOTE: This is not a summary email)</value>
+  </data>
+  <data name="dnnlblAnswerEmailTemplate.Text" xml:space="preserve">
+    <value>Answer Email Template</value>
+  </data>
+  <data name="dnnlblCommentEmailTemplate.Help" xml:space="preserve">
+    <value>This is the email template used for sending out notification about a new comment. Anytime a comment is added to the question or answers, users who are subscribed to the question will receive a notification. </value>
+  </data>
+  <data name="dnnlblCommentEmailTemplate.Text" xml:space="preserve">
+    <value>Comment Email Template</value>
+  </data>
+  <data name="dnnlblEnableLinkedIn.Help" xml:space="preserve">
+    <value>If checked, the linked in share button will be displayed in the Question view.</value>
+  </data>
+  <data name="dnnlblEnableLinkedIn.Text" xml:space="preserve">
+    <value>Enable LinkedIn Sharing</value>
+  </data>
+  <data name="dnnlblEnablePlusOne.Help" xml:space="preserve">
+    <value>If checked, Google +1 will be enabled for sharing questions.</value>
+  </data>
+  <data name="dnnlblEnablePlusOne.Text" xml:space="preserve">
+    <value>Enable Google +1 Sharing</value>
+  </data>
+  <data name="dnnlblEnableTwitter.Help" xml:space="preserve">
+    <value>If checked, users will be able to Tweet questions.</value>
+  </data>
+  <data name="dnnlblEnableTwitter.Text" xml:space="preserve">
+    <value>Enable Twitter Sharing</value>
+  </data>
+  <data name="dnnlblFacebookAppId.Help" xml:space="preserve">
+    <value>To enable Facebook likes, you must enter a Facebook application ID. </value>
+  </data>
+  <data name="dnnlblFacebookAppId.Text" xml:space="preserve">
+    <value>Facebook App ID</value>
+  </data>
+  <data name="dnnlblQHMS.Help" xml:space="preserve">
+    <value>This is the minimum score required (votes) in order for an item to be displayed on the home page (in addition to the flag removal count).</value>
+  </data>
+  <data name="dnnlblQHMS.Text" xml:space="preserve">
+    <value>Minimum Home Question Score</value>
+  </data>
+  <data name="dnnlblEditOthers.Help" xml:space="preserve">
+    <value>The number of posts (questions &amp; answers combined) a user must have to edit others posts.</value>
+  </data>
+  <data name="dnnlblEditOthers.Text" xml:space="preserve">
+    <value>General Post Edit Threshold</value>
+  </data>
+</root>

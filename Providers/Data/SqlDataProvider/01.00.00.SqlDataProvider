@@ -1,0 +1,1040 @@
+﻿
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Vote_GetPost') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Vote_GetPost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_UpdateViewCount') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_UpdateViewCount
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_GetAnswers') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_GetAnswers
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Setting_Update') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Setting_Update
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscription_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscription_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_DeleteUserPost') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscription_DeleteUserPost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_GetUser') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscription_GetUser
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_History_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_History_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_History_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_History_Get
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Setting_GetPortal') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Setting_GetPortal
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Get
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Vote_GetTerm') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Vote_GetTerm
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Replaced') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Replaced
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Comment_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment_GetPost') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Comment_GetPost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log_GetByKey') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log_GetByKey
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_ContentItem_GetByTypeAndCreated') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_ContentItem_GetByTypeAndCreated
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscribers_GetByContentItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscribers_GetByContentItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_UpdateScheduleItemSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_UpdateScheduleItemSetting
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_GetUsersLast') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_GetUsersLast
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}vw_DNNQA_Posts') and OBJECTPROPERTY(id, N'IsView') = 1)
+	DROP VIEW {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}vw_DNNQA_Terms') and OBJECTPROPERTY(id, N'IsView') = 1)
+	DROP VIEW {databaseOwner}{objectQualifier}vw_DNNQA_Terms
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Taxonomy_Terms') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym DROP CONSTRAINT FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Taxonomy_Terms
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym DROP CONSTRAINT FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Moderation_Log_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Moderation_Log DROP CONSTRAINT FK_{objectQualifier}DNNQA_Moderation_Log_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Moderation_Log') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Moderation_Log
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Users') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Users
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Setting_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting DROP CONSTRAINT FK_{objectQualifier}DNNQA_Setting_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Setting') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Setting
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Comment_{objectQualifier}DNNQA_Post') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Comment DROP CONSTRAINT FK_{objectQualifier}DNNQA_Comment_{objectQualifier}DNNQA_Post
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Comment
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Post_History_{objectQualifier}DNNQA_Post') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Post_History DROP CONSTRAINT FK_{objectQualifier}DNNQA_Post_History_{objectQualifier}DNNQA_Post
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_History') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Post_History
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Term_History_{objectQualifier}Taxonomy_Terms') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_History DROP CONSTRAINT FK_{objectQualifier}DNNQA_Term_History_{objectQualifier}Taxonomy_Terms
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_History') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Term_History
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Subscription_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Subscription DROP CONSTRAINT FK_{objectQualifier}DNNQA_Subscription_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Subscription
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Vote') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Vote
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Post_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Post DROP CONSTRAINT FK_{objectQualifier}DNNQA_Post_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Post
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Post]
+(
+	[PostId] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [nvarchar](150) NULL,
+	[Body] [nvarchar](max) NOT NULL,
+	[Bounty] [int] NULL,
+	[ParentId] [int] NULL,
+	[PortalId] [int] NOT NULL,
+	[ContentItemId] [int] NULL,
+	[ViewCount] [int] NULL,
+	[Score] [int] NOT NULL,
+	[Approved] [bit] NOT NULL,
+	[ApprovedDate] [datetime] NULL,
+	[Deleted] [bit] NOT NULL,
+	[AnswerId] [int] NULL,
+	[AnswerDate] [datetime] NULL,
+	[Closed] [bit] NOT NULL,
+	[ClosedDate] [datetime] NULL,
+	[Protected] [bit] NOT NULL,
+	[ProtectedDate] [datetime] NULL,
+	[CreatedUserId] [int] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[LastModifiedUserId] [int] NULL,
+	[LastModifiedDate] [datetime] NULL
+)
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Post
+		WITH NOCHECK
+ADD CONSTRAINT PK_{objectQualifier}DNNQA_Post PRIMARY KEY CLUSTERED ( [PostId] )
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Post
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Post_{objectQualifier}Portals FOREIGN KEY ( [PortalId] ) REFERENCES {databaseOwner}{objectQualifier}Portals ( [PortalID] ) ON DELETE CASCADE
+		ON UPDATE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Vote]
+(
+	[VoteId] [int] IDENTITY(1,1) NOT NULL,
+	[PostId] [int] NOT NULL,
+	[TermId] [int] NOT NULL,
+	[VoteTypeId] [int] NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[CreatedByUserId] [int] NOT NULL,
+	[CreatedOnDate] [datetime] NOT NULL
+)
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Vote
+		WITH NOCHECK
+ADD CONSTRAINT PK_{objectQualifier}DNNQA_Vote PRIMARY KEY CLUSTERED ( [VoteId] )
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Subscription]
+(
+	[SubscriptionId] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [int] NULL,
+	[PortalId] [int] NOT NULL,
+	[EmailAddress] [nvarchar](150) NULL,
+	[PostId] [int] NULL,
+	[TermId] [int] NULL,
+	[SubscriptionType] [int] NOT NULL,
+	[CreatedOnDate] [datetime] NOT NULL,
+	[LastSentOnDate] [datetime] NULL
+)
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Subscription
+		WITH NOCHECK
+ADD CONSTRAINT PK_{objectQualifier}DNNQA_Subscription PRIMARY KEY CLUSTERED ( [SubscriptionId] )
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Subscription
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Subscription_{objectQualifier}Portals FOREIGN KEY ( [PortalId] ) REFERENCES {databaseOwner}{objectQualifier}Portals ( [PortalID] )
+ON DELETE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Comment]
+(
+	[CommentId] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [int] NOT NULL,
+	[PostId] [int] NOT NULL,
+	[Comment] [nvarchar](max) NOT NULL,
+	[CreatedOnDate] [datetime] NOT NULL
+)
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Comment
+		WITH NOCHECK
+ADD CONSTRAINT PK_{objectQualifier}DNNQA_Comment PRIMARY KEY CLUSTERED ( [CommentId] )
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Comment
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Comment_{objectQualifier}DNNQA_Post FOREIGN KEY ( [PostId] ) REFERENCES {databaseOwner}{objectQualifier}DNNQA_Post ( [PostId] )
+ON DELETE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Term_History]
+(
+	[TermId] [int] NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[Name] [nvarchar](250) NOT NULL,
+	[Description] [nvarchar](2500) NULL,
+	[Notes] [nvarchar](1000) NULL,
+	[Approved] [bit] NOT NULL,
+	[Revision] [int] NOT NULL,
+	[RevisedByUserId] [int] NOT NULL,
+	[RevisedOnDate] [datetime] NOT NULL
+)
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_History
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Term_History_{objectQualifier}Taxonomy_Terms FOREIGN KEY ( [TermId] )
+REFERENCES {databaseOwner}{objectQualifier}Taxonomy_Terms ( [TermID] ) 
+ON DELETE CASCADE 
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Post_History]
+(
+	[PostId] [int] NOT NULL,
+	[Title] [nvarchar](100) NULL,
+	[Body] [nvarchar](max) NOT NULL,
+	[Notes] [nvarchar](1000) NULL,
+	[Revision] [int] NOT NULL,
+	[Approved] [bit] NOT NULL,
+	[RevisedByUserId] [int] NOT NULL,
+	[RevisedOnDate] [datetime] NOT NULL
+) 
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Post_History
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Post_History_{objectQualifier}DNNQA_Post FOREIGN KEY ( [PostId] ) 
+REFERENCES {databaseOwner}{objectQualifier}DNNQA_Post ( [PostId] ) 
+ON DELETE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Setting](
+	[Key] [nvarchar](50) NOT NULL,
+	[Value] [nvarchar](max) NOT NULL,
+	[TypeId] [int] NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[SettingId] [int] IDENTITY(1,1) NOT NULL
+) 
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting
+	WITH NOCHECK
+	ADD CONSTRAINT PK_{objectQualifier}DNNQA_Setting PRIMARY KEY CLUSTERED ( [SettingId] )
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Setting_{objectQualifier}Portals FOREIGN KEY ( [PortalId] ) 
+REFERENCES {databaseOwner}{objectQualifier}Portals ( [PortalID] ) 
+ON DELETE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_User_Score](
+	[UserId] [int] NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[Score] [int] NOT NULL
+) 
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Portals FOREIGN KEY ( [PortalId] ) 
+REFERENCES {databaseOwner}{objectQualifier}Portals ( [PortalID] ) 
+ON DELETE CASCADE
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Users FOREIGN KEY ( [UserId] ) 
+REFERENCES {databaseOwner}{objectQualifier}Users ( [UserID] ) 
+ON DELETE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Moderation_Log]
+(
+	[ModLogId] [int] IDENTITY(1,1) NOT NULL,
+	[ModLogTypeId] [int] NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[PostId] [int] NULL,
+	[TermId] [int] NULL,
+	[VoteId] [int] NULL,
+	[Notes] [nvarchar](2000) NULL,
+	[CreatedByUserId] [int] NOT NULL,
+	[CreatedOnDate] [datetime] NOT NULL
+) 
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Moderation_Log
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Moderation_Log_{objectQualifier}Portals FOREIGN KEY ( [PortalId] ) 
+REFERENCES {databaseOwner}{objectQualifier}Portals ( [PortalID] ) 
+ON DELETE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Term_Synonym](
+	[TermSynonymId] [int] IDENTITY(1,1) NOT NULL,
+	[MasterTermId] [int] NOT NULL,
+	[RelatedTermId] [int] NOT NULL,
+	[Score] [int] NOT NULL,
+	[ChangedCount] [int] NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[CreatedByUserId] [int] NOT NULL,
+	[CreatedOnDate] [datetime] NOT NULL
+) 
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Taxonomy_Terms FOREIGN KEY ( [MasterTermId] ) 
+REFERENCES {databaseOwner}{objectQualifier}Taxonomy_Terms ( [TermID] ) 
+ON DELETE CASCADE
+GO
+
+ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+ADD CONSTRAINT FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Portals FOREIGN KEY ( [PortalId] ) 
+REFERENCES {databaseOwner}{objectQualifier}Portals ( [PortalID] ) 
+ON DELETE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_User_Score_Log](
+	[UserId] [int] NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[UserScoringActionId] [int] NOT NULL,
+	[Score] [int] NOT NULL,
+	[KeyId] [int] NULL,
+	[Notes] [nvarchar](500) NULL,
+	[CreatedOnDate] [datetime] NOT NULL
+) 
+GO
+
+CREATE VIEW {databaseOwner}[{objectQualifier}vw_DNNQA_Posts]
+AS
+	SELECT  CI.[Content] ,
+			P.ContentItemID ,
+			P.PostID ,
+			P.Title ,
+			P.Body ,
+			P.Bounty ,
+			P.PortalID ,
+			P.ViewCount ,
+			P.Approved ,
+			P.AnswerID ,
+			P.AnswerDate ,
+			P.ClosedDate ,
+			P.CreatedUserID ,
+			CI.ContentTypeID ,
+			CI.TabID ,
+			CI.ModuleID ,
+			CI.ContentKey ,
+			CI.Indexed ,
+			CI.CreatedByUserID ,
+			CI.CreatedOnDate ,
+			CI.LastModifiedByUserID ,
+			CI.LastModifiedOnDate ,
+			P.ApprovedDate ,
+			P.Deleted ,
+			P.ParentID ,
+			P.Score ,
+			P.Closed ,
+			P.Protected ,
+			P.ProtectedDate ,
+			P.CreatedDate ,
+			P.LastModifiedUserID ,
+			P.LastModifiedDate
+	FROM    {databaseOwner}{objectQualifier}ContentItems AS CI
+			INNER JOIN {databaseOwner}{objectQualifier}DNNQA_Post AS P ON CI.ContentItemID = P.ContentItemID
+GO
+
+CREATE VIEW {databaseOwner}[{objectQualifier}vw_DNNQA_Terms]
+AS
+	SELECT  TT.TermID ,
+			TT.Name ,
+			TT.ParentTermID ,
+			TT.[Description] ,
+			CI.CreatedOnDate ,
+			TV.Name AS VocabularyName ,
+			TV.VocabularyID ,
+			CI.TabID ,
+			CI.ModuleID ,
+			CI.ContentTypeID ,
+			CI.ContentItemID ,
+			T.PortalID ,
+			TT.[Weight] ,
+			TT.TermLeft ,
+			TT.TermRight 
+	FROM    {databaseOwner}{objectQualifier}Taxonomy_Vocabularies AS TV
+			INNER JOIN {databaseOwner}{objectQualifier}Taxonomy_Terms AS TT ON TV.VocabularyID = TT.VocabularyID
+			INNER JOIN {databaseOwner}{objectQualifier}ContentItems_Tags AS CIT ON TT.TermID = CIT.TermID
+			INNER JOIN {databaseOwner}{objectQualifier}ContentItems AS CI ON CIT.ContentItemID = CI.ContentItemID
+			INNER JOIN {databaseOwner}{objectQualifier}Tabs AS T ON CI.TabID = T.TabID
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Post_UpdateViewCount]
+	@PostID INT,
+	@PortalID INT
+AS 
+	UPDATE  {databaseOwner}{objectQualifier}DNNQA_Post
+	SET     ViewCount = ViewCount + 1
+	WHERE   PortalID = @PortalID
+			AND ( PostID = @PostID )
+			OR ( ParentID = @PostID )
+		  AND Approved = 1
+		  AND Deleted = 0
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Post_GetAnswers]
+	@PostId INT ,
+	@PortalId INT
+AS 
+	SELECT  * ,
+			( SELECT    LastModifiedUserID
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     PostId = vp.PostId
+			  AND			Deleted = 0
+			) AS LastApprovedUserId ,
+			( SELECT    LastModifiedDate
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     PostId = vp.PostId
+			  AND			Deleted = 0
+			) AS LastApprovedDate ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     ( ParentId = vp.PostId )
+						AND ( ParentId <> 0 )
+						AND ( Approved = 1 )
+						AND ( Deleted = 0 )
+			) AS TotalAnswers ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     ( PostId = vp.PostId )
+						AND ( vp.ParentID = 0 )
+			) AS QuestionVotes ,
+			( SELECT    @@ROWCOUNT
+			) AS TotalRecords
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Posts vp
+	WHERE   ParentId = @PostId
+			AND PortalId = @PortalId
+			AND Deleted = 0
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Post_Delete]
+	@PostId INT,
+	@PortalId INT
+AS 
+	DELETE  {databaseOwner}{objectQualifier}DNNQA_Post
+	WHERE   PortalId = @PortalId
+			AND ( ( PostId = @PostId )
+				  OR ( ParentId = @PostId )
+				)
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Subscription_Add]
+	@PortalId INT ,
+	@UserId INT ,
+	@EmailAddress NVARCHAR(150) ,
+	@PostId INT ,
+	@TermId INT ,
+	@SubscriptionType INT ,
+	@CreatedOnDate DATETIME
+AS 
+	BEGIN
+		INSERT  {databaseOwner}{objectQualifier}DNNQA_Subscription
+				( UserId ,
+				  PortalId ,
+				  EmailAddress ,
+				  PostId ,
+				  TermId ,
+				  SubscriptionType ,
+				  CreatedOnDate
+				)
+		VALUES  ( @UserId ,
+				  @PortalId ,
+				  @EmailAddress ,
+				  @PostId ,
+				  @TermId ,
+				  @SubscriptionType ,
+				  @CreatedOnDate	        
+				)
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Subscription_Delete]
+	@PortalId INT ,
+	@SubscriptionId INT
+AS 
+	BEGIN
+		DELETE  {databaseOwner}{objectQualifier}DNNQA_Subscription
+		WHERE   PortalId = @PortalId
+				AND SubscriptionId = @SubscriptionId
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_History_Add]
+	@PortalId INT ,
+	@TermId INT ,
+	@Notes NVARCHAR(1000) ,
+	@Approved BIT
+AS 
+	BEGIN
+		DECLARE @Revision INT        
+		SET @Revision = ISNULL(( SELECT MAX(Revision)
+								 FROM   {databaseOwner}{objectQualifier}DNNQA_Term_History
+								 WHERE  PortalId = @PortalId
+										AND TermId = @TermId
+							   ), 0) + 1
+		INSERT  {databaseOwner}{objectQualifier}DNNQA_Term_History
+				( TermId ,
+				  PortalId ,
+				  Name ,
+				  [Description] ,
+				  Notes,
+				  Revision ,
+				  RevisedByUserId ,
+				  RevisedOnDate ,
+				  Approved
+				)
+				SELECT  TermId ,
+						@PortalId ,
+						[Name] ,
+						[Description] ,
+						@Notes ,
+						@Revision ,
+						ISNULL(LastModifiedByUserID, CreatedByUserID) ,
+						ISNULL(LastModifiedOnDate, CreatedOnDate) ,
+						@Approved
+				FROM    {databaseOwner}{objectQualifier}Taxonomy_Terms
+				WHERE   TermID = @TermId
+				
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_History_Get]
+	@PortalId INT ,
+	@TermId INT
+AS 
+	BEGIN
+		SELECT  *
+		FROM    {databaseOwner}{objectQualifier}DNNQA_Term_History
+		WHERE   TermId = @TermId
+				AND PortalId = @PortalId
+		ORDER BY RevisedOnDate DESC          
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Setting_GetPortal] @PortalId INT
+AS 
+	SELECT  *
+	FROM    {databaseOwner}{objectQualifier}DNNQA_Setting
+	WHERE   PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_Synonym_Get] @PortalId INT
+AS 
+	SELECT  *
+	FROM    {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+	WHERE   PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_Synonym_Add]
+	@MasterTermId INT ,
+	@RelatedTermId INT ,
+	@PortalId INT ,
+	@CreatedByUserId INT ,
+	@CreatedOnDate DATETIME
+AS 
+	INSERT  INTO {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+			( MasterTermId ,
+			  RelatedTermId ,
+			  Score ,
+			  ChangedCount ,
+			  PortalId ,
+			  CreatedByUserId ,
+			  CreatedOnDate
+		  )
+	VALUES  ( @MasterTermId ,
+			  @RelatedTermId ,
+			  0 ,
+			  0 ,
+			  @PortalId ,
+			  @CreatedByUserId ,
+			  @CreatedOnDate
+		  )
+	SELECT  SCOPE_IDENTITY()
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Setting_Update]
+	@Key NVARCHAR(50) ,
+	@Value NVARCHAR(MAX) ,
+	@TypeId INT ,
+	@PortalId INT
+AS 
+	DECLARE @SettingCount INT
+	SET @SettingCount = ISNULL(( SELECT COUNT([Key])
+										 FROM   {databaseOwner}{objectQualifier}DNNQA_Setting
+										 WHERE  [Key] = @Key
+												AND TypeId = @TypeId
+												AND PortalId = @PortalId
+									   ), 0)
+
+	IF @SettingCount < 1 
+		BEGIN
+			INSERT  {databaseOwner}{objectQualifier}DNNQA_Setting
+					( [Key], [Value], TypeId, PortalId )
+			VALUES  ( @Key, @Value, @TypeId, @PortalId )
+		END
+	ELSE 
+		BEGIN
+			UPDATE  {databaseOwner}{objectQualifier}DNNQA_Setting
+			SET     [Value] = @Value
+			WHERE   [Key] = @Key
+					AND TypeId = @TypeID
+					AND PortalId = @PortalId
+		END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_Synonym_Replaced]
+	@RelatedTermId INT ,
+	@PortalId INT
+AS 
+	UPDATE  {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+	SET     ChangedCount = ChangedCount + 1
+	WHERE   RelatedTermId = @RelatedTermId
+			AND PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Comment_Add]
+	@UserId INT ,
+	@PostId INT ,
+	@Comment NVARCHAR(MAX) ,
+	@CreatedOnDate DATETIME
+AS 
+	BEGIN
+		INSERT  {databaseOwner}{objectQualifier}DNNQA_Comment
+				( UserId ,
+				  PostId ,
+				  Comment ,
+				  CreatedOnDate
+				)
+		VALUES  ( @UserId ,
+				  @PostId ,
+				  @Comment ,
+				  @CreatedOnDate
+				)
+		SELECT  SCOPE_IDENTITY()
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Comment_GetPost] @PostId INT
+AS 
+	BEGIN
+		SELECT  *
+		FROM    {databaseOwner}{objectQualifier}DNNQA_Comment
+		WHERE   PostId = @PostId
+		ORDER BY CreatedOnDate ASC
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Subscription_DeleteUserPost]
+	@UserId INT ,
+	@PostId INT
+AS 
+	BEGIN
+		DELETE  {databaseOwner}{objectQualifier}DNNQA_Subscription
+		WHERE   UserId = @UserId
+				AND PostId = @PostId 
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Subscription_GetUser]
+	@PortalId INT ,
+	@UserId INT
+AS 
+	BEGIN
+		SELECT  S.* ,
+				Name ,
+				Title
+		FROM    {databaseOwner}{objectQualifier}DNNQA_Subscription S
+				LEFT JOIN {databaseOwner}{objectQualifier}Taxonomy_Terms T ON S.TermId = T.TermID
+				LEFT JOIN {databaseOwner}{objectQualifier}DNNQA_Post P ON S.PostId = P.PostId
+		WHERE   UserId = @UserId
+				AND S.PortalId = @PortalId
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_Synonym_Delete]
+	@MasterTermId INT ,
+	@RelatedTermId INT ,
+	@PortalId INT
+AS 	
+	DELETE  {databaseOwner}{objectQualifier}DNNQA_Vote
+	WHERE   TermId = @RelatedTermId
+			AND PortalId = @PortalId
+			AND ((VoteTypeId = 2) OR (VoteTypeId = -2))
+			
+	DELETE  {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+	WHERE   RelatedTermId = @RelatedTermId
+			AND MasterTermId = @MasterTermId
+			AND PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Vote_GetTerm]
+	@TermId INT ,
+	@PortalId INT
+AS 
+	SELECT  VoteId ,
+			PostId ,
+			TermId ,
+			VoteTypeId ,
+			PortalId ,
+			CreatedByUserId ,
+			CreatedOnDate
+	FROM    {databaseOwner}{objectQualifier}DNNQA_Vote
+	WHERE   TermId = @TermId
+			AND PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_User_Score_Log_GetByKey]
+	@KeyId INT ,
+	@PortalId INT
+AS 
+	SELECT  *
+	FROM    {databaseOwner}{objectQualifier}DNNQA_User_Score_Log
+	WHERE   KeyId = @KeyId
+			AND PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_User_Score_Log_Delete]
+	@UserId INT ,
+	@PortalId INT ,
+	@UserScoringActionId INT ,
+	@Score INT ,
+	@KeyId INT
+AS 
+	DECLARE @UserActionScore INT
+	SET @UserActionScore = ISNULL(( SELECT  SUM(Score)
+											FROM    {databaseOwner}{objectQualifier}DNNQA_User_Score_Log
+											WHERE   UserId = @UserId
+													AND PortalId = @PortalId
+													AND KeyId = @KeyId
+													AND UserScoringActionId = @UserScoringActionId
+										  ), 0)
+			
+	IF @UserActionScore != 0 
+		BEGIN
+			UPDATE  {databaseOwner}{objectQualifier}DNNQA_User_Score
+			SET     Score = Score - @UserActionScore
+			WHERE   PortalId = @PortalId
+					AND UserId = @UserId
+		END
+			
+	DELETE  {databaseOwner}{objectQualifier}DNNQA_User_Score_Log
+	WHERE   UserId = @UserId
+			AND PortalId = @PortalId
+			AND KeyId = @KeyId
+			AND UserScoringActionId = @UserScoringActionId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_User_Score_Log_Add]
+	@UserId INT ,
+	@PortalId INT ,
+	@UserScoringActionId INT ,
+	@Score INT ,
+	@KeyId INT ,
+	@Notes NVARCHAR(500) ,
+	@CreatedOnDate DATETIME
+AS 
+	INSERT  {databaseOwner}{objectQualifier}DNNQA_User_Score_Log
+			( UserId ,
+			  PortalId ,
+			  UserScoringActionId ,
+			  Score ,
+			  KeyId ,
+			  Notes ,
+			  CreatedOnDate
+			)
+	VALUES  ( @UserId ,
+			  @PortalId ,
+			  @UserScoringActionId ,
+			  @Score ,
+			  @KeyId ,
+			  @Notes ,
+			  @CreatedOnDate
+			)
+	DECLARE @PortalUserCount INT
+	SET @PortalUserCount = ISNULL(( SELECT  COUNT(UserId)
+											FROM    {databaseOwner}{objectQualifier}DNNQA_User_Score
+											WHERE   UserId = @UserId
+										  ), 0)
+	IF @PortalUserCount != 0 
+		BEGIN
+			UPDATE  {databaseOwner}{objectQualifier}DNNQA_User_Score
+			SET     Score = Score + @Score
+			WHERE   PortalId = @PortalId
+					AND UserId = @UserId
+		END
+	ELSE 
+		BEGIN
+			INSERT  {databaseOwner}{objectQualifier}DNNQA_User_Score
+					( UserId, PortalId, Score )
+			VALUES  ( @UserId, @PortalId, @Score )
+		END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Vote_GetPost] @PostId INT
+AS 
+	SELECT  VoteId,
+			PostId,
+			TermId,
+			VoteTypeId,
+			PortalId ,
+			CreatedByUserId,
+			CreatedOnDate
+	FROM    {databaseOwner}{objectQualifier}DNNQA_Vote
+	WHERE   PostId = @PostId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_ContentItem_GetByTypeAndCreated]
+	@ContentTypeId INT ,
+	@StartDate DATETIME ,
+	@EndDate DATETIME
+AS 
+	SELECT  CI.* ,
+			PortalId
+	FROM    {databaseOwner}{objectQualifier}ContentItems CI
+			INNER JOIN {databaseOwner}{objectQualifier}Tabs T ON CI.TabID = T.TabID
+	WHERE   ContentTypeID = @ContentTypeId
+			AND CI.CreatedOnDate > @StartDate
+			AND CI.CreatedOnDate < @EndDate
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Subscribers_GetByContentItem]
+	@ContentItemId INT ,
+	@SubscriptionType INT ,
+	@PortalId INT
+AS 
+	SELECT  DISTINCT
+			( U.UserID ) ,
+			U.FirstName ,
+			U.LastName ,
+			U.Email ,
+			U.DisplayName ,
+			U.PortalId
+	FROM    {databaseOwner}{objectQualifier}DNNQA_Subscription S
+			INNER JOIN {databaseOwner}{objectQualifier}vw_Users U ON S.UserId = U.UserID
+			INNER JOIN {databaseOwner}{objectQualifier}ContentItems_Tags CT ON S.TermId = CT.TermID
+	WHERE   SubscriptionType = @SubscriptionType
+			AND ContentItemID = @ContentItemId
+			AND U.PortalId = @PortalId
+			AND S.PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_UpdateScheduleItemSetting]
+	@ScheduleID INT ,
+	@Key NVARCHAR(50) ,
+	@Value NVARCHAR(256)
+AS 
+	UPDATE  {databaseOwner}{objectQualifier}ScheduleItemSettings
+	SET     SettingValue = @Value
+	WHERE   ScheduleID = @ScheduleID
+			AND SettingName = @Key
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Post_GetUsersLast]
+	@UserId INT ,
+	@PortalId INT
+AS 
+	SELECT  TOP 1
+			PostId ,
+			Title ,
+			Body ,
+			Bounty ,
+			ParentId ,
+			PortalId ,
+			ViewCount ,
+			Score ,
+			Approved ,
+			ApprovedDate ,
+			Deleted ,
+			AnswerId ,
+			AnswerDate ,
+			Closed ,
+			ClosedDate ,
+			Protected ,
+			ProtectedDate ,
+			CreatedUserId ,
+			CreatedDate ,
+			LastModifiedUserId ,
+			LastModifiedDate ,
+			ContentItemId ,
+			Content ,
+			ContentTypeID ,
+			TabID ,
+			ModuleID ,
+			ContentKey ,
+			Indexed ,
+			CreatedByUserId ,
+			CreatedOnDate ,
+			LastModifiedByUserID ,
+			LastModifiedOnDate ,
+			( SELECT    LastModifiedUserId
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     PostId = vp.PostId
+			  AND			Deleted = 0
+			) AS LastApprovedUserId ,
+			( SELECT    LastModifiedDate
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     PostId = vp.PostId
+			  AND			Deleted = 0
+			) AS LastApprovedDate ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     ( ParentId = vp.PostId )
+						AND ( ParentId <> 0 )
+						AND ( Approved = 1 )
+						AND ( Deleted = 0 )
+			) AS TotalAnswers ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     ( PostId = vp.PostId )
+						AND ( vp.ParentId = 0 )
+			) AS QuestionVotes ,
+			1 AS TotalRecords
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Posts vp
+	WHERE   CreatedUserID = @UserId
+			AND PortalId = @PortalId
+	ORDER BY CreatedDate DESC
+GO
+
+DELETE FROM {databaseOwner}{objectQualifier}Schedule
+WHERE 
+	TypeFullName = 'DotNetNuke.DNNQA.Components.Tasks.Emailer, DotNetuke.Modules.DNNQA'
+GO
+
+INSERT INTO {databaseOwner}{objectQualifier}Schedule
+	([TypeFullName], [TimeLapse], [TimeLapseMeasurement], [RetryTimeLapse], [RetryTimeLapseMeasurement], [RetainHistoryNum], [AttachToEvent], [CatchUpEnabled], [Enabled], [ObjectDependencies], [Servers], [FriendlyName])
+VALUES ( 'DotNetNuke.DNNQA.Components.Tasks.Emailer, DotNetNuke.Modules.DNNQA', 1, 'm', -1, 'm', 10, '', 0, 1, '', null, 'Q&A Subscriptions' )
+GO
+

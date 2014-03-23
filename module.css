@@ -1,0 +1,349 @@
+/* -- Home.ascx -- */
+ul.qaRecentTags, ul.qaRecentTags li{list-style:none;margin:0px;padding:0 0 5px 0;}
+.rtTag{line-height: 14px;float: left;width: 188px;}
+.myDashboardNumbers li {margin:10px 0;}
+.myDashboardNumbers span {float:right; color:#fff; font-weight:bold; font-size:12px;  background-color:#808080; padding:4px;}
+/* -- end home.ascx -- */
+/* -- Question.ascx --- */
+.question{background:#f1f1f1;padding:5px 15px 10px 0px;margin-bottom:25px;}
+.question table, .answers table{width:98%;}
+	.qaqVote{width:10%;padding:10px;vertical-align:top;text-align: center;}
+	.qaqVote img{padding-top: 30px;}
+	.qaqBody{width:90%;padding:10px 0px;}
+	.qaqBody .tags{padding-top:10px;padding-bottom:10px;}
+.qaqFooter {padding: 8px;float:right;width: 100%;}
+	.qaqFooter .qaqActivity{float:right;}
+		.qaqActivity .dnnRight img{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#fff;border:1px #ccc solid;padding:4px;}
+	.qaqComments{}
+.qaqActivity{color:#777;padding-right:15px;}
+	.qaqActivity .dnnLeft{width:200px;text-align:right;padding:6px 10px 0px 0px;}
+		.qaqActivity .dnnLeft a{display:block;font-weight:bold;}
+	.qaqActivity .dnnRight{width:40px;}
+/* social area */
+ul.qaSocialActions{clear:both;margin:0px;padding:0px;min-height: 28px;}
+ul.qaSocialActions, ul.qaSocialActions li{list-style:none;padding:0px;}
+	ul.qaSocialActions li {display:block;float:left;padding:4px;}
+.connect_widget_not_connected_text{display:none !important; /*to hide the counter!*/}
+.fb_edge_widget_with_comment iframe{width:47px !important;}
+/* but make the span that holds the comment box larger */
+span.fb_edge_comment_widget.fb_iframe_widget iframe{width:401px !important;}
+/* end social area */
+/* Modal Content */
+.qaInform{padding: 8px;}
+	.qaInform span{background: orange;padding: 4px;}
+#divQuestionFlag{padding:15px 20px;}
+/* end modal content */
+
+ul.qaBadgeList{display:inline;overflow:hidden;clear:both;margin:0px;padding:0px;}
+	ul.qaBadgeList, ul.qaBadgeList li{display:inline;list-style:none;padding:0px;}
+	ul.qaBadgeList li a{display:inline;float:left;padding:8px;}
+	
+/* Moderator Menu */
+ul.qaModActions{overflow:hidden;clear:both;margin:0px;padding:0px;}
+	ul.qaModActions, ul.qaModActions li{list-style:none;padding:0px;}
+	ul.qaModActions li a{display:block;float:left;padding:8px;}
+/* end moderator menu */
+/*------ comments -----*/
+	.qaCommentArea h2.dnnFormSectionHead{font-size:1em; padding-left: 12px;background: url(../../DesktopModules/DNNQA/images/comment.gif) no-repeat;}
+	.qaCommentArea fieldset, .qaCommentArea .dnnFormItem{padding:0px;}
+		.qaCommentArea .dnnFormItem{padding-bottom:10px;}
+	.qaCommentArea textarea	{width:98%;}
+ul.qaComments, ul.qaComments li{list-style:none;padding:0px;margin:0px;}
+	ul.qaComments{margin-top:10px;}
+	ul.qaComments li{display:block;border-top:1px #ccc dotted;}
+/* - end comments - */
+/* -- end question.ascx -- */
+/* --- Browse.ascx --- */
+.qaPager{float:right;padding-right:4px;width:200px;margin-right:10px;}
+ul.qaPageActions{overflow:hidden;clear:both;margin:0px;padding:0px;}
+	ul.qaPageActions, ul.qaPageActions li{list-style:none;}
+		ul.qaPageActions li a{display:block;float:right;padding:8px 15px 7px;font-weight:bold;margin-left:10px;}
+/* --- end browse.ascx --- */
+/* ------------ SHARED ----------------- */
+/* Priviliges.ascx, Home.ascx, Browse.ascx, Badges.ascx */
+.qaHome, .qaPrivilege, .qaBadges, .qaBadge, .qaBrowse, .dnnqaQuestion{width: 100%;}
+.qaContent{width:75%;min-height:370px;}
+.qaSideList{width:202px;}
+	.qaSideList h3{border-bottom:1px #ccc dotted;}
+/* end privileges, home, browse */
+/* Home.ascx, Browse.ascx */
+.qaQuestion {width:100%;border-bottom:1px #E3E3E3 solid;clear:both;overflow:hidden;padding:1% 0px;margin:1% 0px;}
+.qaQuestion .votes, .qaQuestion .answers, .qaQuestion .views{width:22%;float:right;margin-left:1%;padding-left:3px;border-bottom:1px #DADADA solid;border-right:1px #DADADA solid;background:#eee;padding:6px;}
+	.qaQuestion .votes span, .qaQuestion .answers span, .qaQuestion .views span{display:block;padding:0px 3px;font-size:11px;text-align:center;}
+	.qaQuestion .answers{color: #8b0000;text-shadow:0px 1px 1px #fff;}
+	.qaQuestion .answers.multiple{color:#fff;background:#4FAF32;border-bottom:1px #348C19 solid;border-right:1px #348C19 solid;text-shadow:0px 1px 1px #19470B}
+.qaQuestion .votes{}
+.qaQuestion .views{/*color:#727272;*/}
+.qaQuestion .qnotes{width:66%;min-height:50px;vertical-align:top;}
+.qaQuestion .qnotes h3{font-size:1.4em;margin:0px;padding:0px;}
+	.qaQuestion .qnotes h3 a{/*background:url(images/1316100946_tick_circle.png) no-repeat right;padding:0px 30px 0px 0px;*/}
+	.qaQuestion .qnotes h3 img{margin:0px 0px 0px 10px;}	
+.qstats{width:32%;}
+.qaQuestion .tags{}
+.qaQuestion .started{color:#666;font-size:11px;padding-top:2px;}
+	.qaQuestion span.count{font-size:165%;font-weight:bold;display:block;float:none;text-align:center;}
+	.qaQuestion .tags{padding:3% 0 0 0;}
+/* end home, browse */
+/* sorting actions */
+ul.qaSortActions{overflow:hidden;clear:both;margin:0px;padding:0px;}
+	ul.qaSortActions, ul.qaSortActions li{list-style:none;}
+	ul.qaSortActions li a{display:block;float:left;padding:8px 15px 7px;font-weight:bold;}
+	ul.qaSortActions li a.qaSortSel{background:#fff;border:1px #ccc solid;border-bottom: #fff 1px solid;}
+	/*.qaContent ul.qaSortActions li a.qaSortSel{background:#fff;border:1px #ccc solid;border-bottom: #fff 1px solid;} */
+/* AskQuestion.ascx, EditPost.ascx */
+input.qaAskQuestion{width:61.5%;margin:4px 6px}
+/* Tagify */
+.ui-menu {width: 295px;}
+.tagify-container {width: 300px;height: 100px;border: 1px solid #CCC;background-color: #FFF;border-radius: 2px;font-family: Verdana, sans-serif;font-size: 12px;overflow: auto;}
+	.tagify-container > span {display: inline-block;padding: 3px 5px;margin: 3px;border-radius: 2px;border: 1px solid #EEE;background-color: #E4E4E4;color: #000;}
+	.tagify-container > span > a {padding-left: 5px;color: #eb1414;text-decoration: none;font-weight: bold;border: 0px none;}
+	.tagify-container > input {border: 0px none;width: 290px;}
+	.tagify-container > input:focus {outline: none;}
+/* end tagify */
+/* end askquestion, editpost */
+
+.qaPostsList{background:#eee;float:left;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
+border:1px #ccc solid;width:100%;}
+
+/* ------------ END SHARED --------------- */
+#divQuestionFlag, #divQuestionDelete, #divAnswerFlag, #divAnswerDelete{	padding: 8px;}
+/* -- Privilege.ascx -- */
+	p.qaUserPrivilegeScore{text-align:center;margin:20px 0px;padding:0px;line-height:inherit;}
+	.qaUserScore{width:204px;font-size:40px;color:#000;border:1px #ccc solid;padding:5px 10px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:10px 0px}
+	span.qaCompletionStatus{}
+a.privSelected{font-weight: bold;}
+.percentRight{float: right;padding-left: 4px;}
+/* ----- list question views */
+	ul.plActions{}
+	ul.plActions, ul.plActions li{list-style:none;padding:0px;}
+	ul.plActions li a{font-weight:bold;padding:8px 15px 7px 0px;}
+/* summary area */
+.accepted{}
+.answercount{font-size: 14px;margin-top: 2px;font-weight: bold;}
+	a.tag{background:#E4E4E4;padding:2px 8px 3px 8px;text-transform:lowercase;bottom:auto;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;font-size:11px;margin:2px 2px 6px 0px;text-shadow:1px 1px 1px #f1f1f1;}
+	a.tag:hover{background:#555;text-decoration:none;color:white;text-shadow:none;}
+.vote-value {font-weight: bold;font-size:18px;padding-left:6px;padding-top:4px;padding-bottom: 4px;}
+.post-editor {width: 500px;}
+/* Search results in EditPost.ascx */
+#divSearchResults ul li, #qaMyQ ul li, #qaMyA ul li, #qaMyR ul li{list-style-type:none;padding: 2px;}
+#divSearchResults .answercount, #qaMyQ .answercount, , #qaMyA .answercount, #qaMyR .answercount{background: #6b8e23;color: white;text-align: center;padding-left: 6px;padding-right: 5px;}
+#divSearchResults .summary, #qaMyQ .summary, #qaMyA .summary, #qaMyR .summary{padding-left: 6px;padding-right: 5px;font-weight: bold;}
+/* ----- jquery-ui autocomplete (also in EditPost.ascx) ----- */
+ul.ui-autocomplete{overflow:hidden;clear:both;}
+.ui-autocomplete { position: absolute; cursor: default; }
+.ui-autocomplete-loading { background: white; }
+/* workarounds */
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+/* Menu */
+.ui-menu {list-style:none; padding: 1px; display:block;}
+.ui-menu .ui-menu {margin-top: -3px;}
+.ui-menu .ui-menu-item { cursor: pointer; background: #e3e3e3; margin:0px; padding: 2px; width: 100%; }
+.ui-menu .ui-menu-item a { text-decoration:none;display:block;color:#007CBC !important;font-weight:bold;font-size:1.1em;padding-top:0.4em;}
+.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active { }
+/* -- TagList.ascx -- */
+.dnnqaTagList h2.dnnFormSectionHead{margin-top:30px;}
+.qatlRight{width:250px;float:right;margin-top:-42px;}
+.qaContent .qatlRight{margin-top: -46px;}
+.qaTagResults ul.qaTags, .qaTagResults ul.qaTags li{margin:0px;padding:0px;list-style:none;}
+	.qaTagResults ul.qaTags li{display:block;float:left;width:21%;margin:0px 1% 2%;border-right:1px #EDEDED solid;border-bottom:1px #EDEDED solid;padding:12px 1% 5px;background:#f6f6f6;height:125px;overflow:hidden;}
+	.qaTagResults ul.qaTags li a.tag{font-size:12px;background:#ccc;}
+		span.qaTagCounts{color:#888;}
+	.qaTagResults ul.qaTags li p{font-size:11px;padding:0px;margin:10px 0px 5px 0px;}
+h2.qaTagInfoTagDetails{font-size:1.5em;/*24px*/font-family:inherit;border-bottom:1px #ccc dotted;margin:10px 0px;padding:0px 0px 5px 0px;}
+	h2.qaTagInfoTagDetails span{font-size:0.75em;/*18px*/font-weight:normal;margin-left:1%;}
+.tagDescription{padding:10px;border:1px #ccc solid;background-color: #f5f5f5;border: 1px solid #eee;border: 1px solid rgba(0, 0, 0, 0.05);-webkit-border-radius: 4px;
+  -moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);}
+.qaTagStats {font-weight: bold;}
+.qaTagFilter{margin-bottom:10px;}
+	.qaTagFilter label{font-weight:bold;padding-right:10px;}
+	.qaTagFilter input{-moz-border-radius:3px;border-radius:3px;padding:7px 5px;background:#FFFFF5;-moz-box-shadow:inset 0px 0px 3px 3px #fffbe1;-webkit-box-shadow:inset 0px 0px 3px 3px #fffbe1;box-shadow:inset 0px 0px 3px 3px #fffbe1;border-color:#BCB691;border-width:1px;margin:0px;width:170px;margin:0px 5px 0px 0px}
+/* -- end TagList.ascx -- */
+/* -- Tooltip (tag menu) -- */
+.qaTooltip{display:block;text-align:right;margin:0 8px 8px 0;float:left;}
+.tag-menu{max-width:30em;z-index:25;width:275px;overflow:hidden;line-height:1.4;text-align:left;border-bottom:1px #DADADA solid;border-right:1px #DADADA solid;background:#555;
+	-moz-border-radius:4px;border-radius:4px;padding:0.8em 1em 0.8em 1em;font-weight:normal;display:block;position:absolute;color:#f1f1f1;text-shadow:0px 1px 1px #000;}
+	.tag-menu a, .tag-menu a:link, .tag-menu a:visited{color:#fff;margin:0px 5px;text-decoration:underline;}
+		.tag-menu a:hover{text-decoration:none}
+.tag-menu .tm-heading{font-weight:bold;border-bottom:1px solid #727272;padding-bottom:8px;margin-bottom:8px;}
+.tag-menu .tm-description{line-height:13px;font-size:11px;margin-bottom:8px;}
+.tag-menu .tm-description p{margin-bottom:8px;}
+/* -- end Tooltip -- */
+/* -- Header Navigation (HeaderNav.ascx) -- */
+/* workaround for Darknight right padding of ul/ol */
+.DnnModule ul, ol{
+	padding:0px !important;
+}
+ul.qaNavItems {padding:0px;clear:both;overflow:hidden;border-radius:3px;-moz-border-radius:3px;float:left;
+	background: #818181;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgxODE4MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2NTY1NjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #818181 0%, #656565 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#818181), color-stop(100%,#656565));
+	background: -webkit-linear-gradient(top,  #818181 0%,#656565 100%);
+	background: -o-linear-gradient(top,  #818181 0%,#656565 100%);
+	background: -ms-linear-gradient(top,  #818181 0%,#656565 100%);
+	background: linear-gradient(top,  #818181 0%,#656565 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#818181', endColorstr='#656565',GradientType=0 );
+
+	/*background: #494a4b;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ5NGE0YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMzMzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #494a4b 0%, #333333 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#494a4b), color-stop(100%,#333333));
+	background: -webkit-linear-gradient(top,  #494a4b 0%,#333333 100%);
+	background: -o-linear-gradient(top,  #494a4b 0%,#333333 100%);
+	background: -ms-linear-gradient(top,  #494a4b 0%,#333333 100%);
+	background: linear-gradient(top,  #494a4b 0%,#333333 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494a4b', endColorstr='#333333',GradientType=0 );*/}
+	ul.qaNavItems li{display:block;list-style-type:none;float:left;padding:0px;}
+		ul.qaNavItems li a{display:block;padding:10px 15px 15px 15px;color:#fff;}
+		ul.qaNavItems li a:hover{color:#ccc;}
+		ul.qaNavItems li a.qaNavSel{background:#333 url(Images/down-icn.png) no-repeat bottom;}
+.qaNav{margin-bottom:12px;}
+
+	.qaHeaderTooltip{display:block;text-align:right;float:left;}
+/*.qaNav li a.qaNavSel, .qatlRight li a.qaNavSel{background:#eee;}*/
+.qaAskQuestionLink{margin-right: 16px;}
+	.qaAskQuestionLink a, .qaAskQuestionLink a:link, .qaAskQuestionLink a:visited{padding:0 1.2em;line-height:3;}
+	.qaAskQuestionLink a, .qaAskQuestionLink a:link, .qaAskQuestionLink a:visited{display:inline-block;}
+		.qaAskQuestionLink a, .qaAskQuestionLink a:link, .qaAskQuestionLink a:visited, .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{
+			background: #00ae01;background:-moz-linear-gradient(top, #00ae01 0%, #005901 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#00ae01), color-stop(100%,#005901));
+			filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ae01', endColorstr='#005901',GradientType=0 );-moz-border-radius:3px;border-radius:3px;
+			text-shadow:0px 1px 1px #000;color:#fff;text-decoration:none;font-weight:bold;border-color:#fff}
+		.qaAskQuestionLink a:hover, .qaAskQuestionLink a:visited:hover, .qaAskQuestionLink a:hover,
+			.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:hover{background: #004c01;background:-moz-linear-gradient(top, #004c01 0%, #282828 100%);
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#004c01), color-stop(100%,#282828));filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#004c01', endColorstr='#282828',GradientType=0 );color:#fff;}	
+/* search area */
+	.qaSearch input{padding:4px;background:#fffff5;-moz-box-shadow:inset 0px 0px 3px 3px #fffbe1;-webkit-box-shadow:inset 0px 0px 3px 3px #fffbe1;box-shadow:inset 0px 0px 3px 3px #fffbe1;border-color:#bcb691;border-width:1px;margin:0px;width:202px;line-height:2.1;float:left;
+		-moz-border-radius-topleft: 4px;-moz-border-radius-topright: 4px;-moz-border-radius-bottomright: 4px;-moz-border-radius-bottomleft: 4px;-webkit-border-radius: 4px 4px 4px 4px;border-radius: 4px 4px 4px 4px;}
+	.qaSimilarPosts{background:#eee;padding:5px 10px;margin:5px 0px 0px 6px;float:left;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;border:1px #ccc solid;min-width: 480px;}
+		.qaSimilarPosts p{font-weight:bold;margin:5px 0px;padding:0px;}
+input.searchIcon{ margin-left: -24px;margin-top: 10px;}
+/* end search area */
+/* -- end header navigation *-- */		
+/* -- Voting Control -- */
+ul.qaVotingArea, ul.qaVotingArea li{margin:0px;padding:0px;list-style:none;text-align:center;font-size:32px;}
+	ul.qaVotingArea li a{display:block;text-indent:-9999em;height:24px;}
+	ul.qaVotingArea li.qaVoteUpLink a{background:url(images/vote-icn.png) no-repeat top center;}
+		ul.qaVotingArea li.qaVoteUpLink a:hover{background:url(images/vote-hover-icn.png) no-repeat top center;}
+			li.qaVoteUpLink a.selected{background:url(images/vote-hover-icn.png) no-repeat top center;}
+	ul.qaVotingArea li.qaVoteDownLink a{background:url(images/vote-icn.png) no-repeat bottom center;}
+		ul.qaVotingArea li.qaVoteDownLink a:hover{background:url(images/vote-hover-icn.png) no-repeat bottom center;}
+			li.qaVoteDownList a.selected{background:url(images/vote-hover-icn.png) no-repeat bottom center;}
+/* -- end voting control -- */
+/* Subscriptions */
+.qaInnerTab{padding: 8px;}
+.RadGrid_Simple .rgPager{background:#fff !important;}
+.RadGrid_Simple td.rgPagerCell{border:none !important;border-top:1px #ccc dotted !important;background:#fff !important}
+.RadDataPager.RadDataPager_Simple{border:none !important;background:#fff !important}
+	.RadGrid_Simple .rgRow td, .RadGrid_Simple .rgRow td, .RadGrid_Simple .rgAltRow td, .RadGrid_Simple .rgAltRow td  {border-bottom:1px #ccc dotted !important;border-top:none !important;}
+.RadGrid .NumericPages .rgNumPart, .RadGrid .rgWrap{padding:0px !important}
+.RadGrid td.rgPagerCell{padding:1.2em 0px !important}
+/* -- end subscriptions -- */
+.qaAnswerFooter td.qaqFooter{border-bottom:1px #ccc solid;}
+.ui-dialog.ui-widget{border:5px #ccc solid;background:#fff;-webkit-box-shadow: 0px 0px 20px 5px #999;-moz-box-shadow: 0px 0px 20px 5px #999;box-shadow: 0px 0px 20px 5px #999;-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;}
+.ui-dialog-titlebar{padding:1.1em 1.2em;position:relative;background:#4E4E4E;background:-moz-linear-gradient(top, #4E4E4E 0%, #282828 100%);overflow:hidden;
+				background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#4E4E4E), color-stop(100%,#282828));filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#4E4E4E', endColorstr='#282828',GradientType=0);
+				color:#fff;font-weight:bold;text-shadow:0px 1px 1px #000;cursor:move;-webkit-border-top-left-radius: 4px;-webkit-border-top-right-radius: 4px;-webkit-border-bottom-right-radius: 0px;
+				-webkit-border-bottom-left-radius: 0px;-moz-border-radius-topleft: 4px;-moz-border-radius-topright: 4px;-moz-border-radius-bottomright: 0px;-moz-border-radius-bottomleft: 0px;border-top-left-radius: 4px;
+				border-top-right-radius: 4px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;font-size:14px;}
+	a.ui-dialog-titlebar-close.ui-corner-all{text-indent: -9999em;display: block;position: absolute;right: 10px;top: 10px;background: url(../../images/close-icn.png) no-repeat;height: 24px;width: 24px;}
+.qaEditPost .dnnForm, .qaAskQuestion .dnnForm{min-width:300px;width:100%;}
+	.qaTagHistory .dnnLeft{width:10%;}
+		.qaTagHistory fieldset .dnnLeft img{display:block;margin:0px 1em 0px 0px;border:1px #ccc solid;background:#fff;padding:5px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+	.qaTagHistory .dnnRight{width:88%;padding-top:5px;}
+/* notification bar */
+#divMessage {position:fixed;top:0px;left:0px;width:100%;z-index:10001;text-align:center;font-weight:bold;font-size:100%;color:white;padding:10px 0px 10px 0px;background-color: #901709;}
+	#divMessage span {text-align:center;width: 95%;float:left;}
+	#divMessage a {font-weight:bold;color:#fff;}
+.close-notify {white-space:nowrap;float:right;margin-right:10px;color:#fff;text-decoration:none;border:2px #fff solid;padding-left:3px;padding-right:3px;}
+	.close-notify a {color:#fff;}
+/* end notification bar */
+/* badges */
+.qaContent .dnnGrid{width: 99%;}
+td.qaAwardedCell{width: 20px;}
+td.qaBadgeCell{width: 200px;}
+td.qaDescriptionCell{}
+
+.qaBadge{line-height: 24px;}
+	a.qaBadge{background:#656565;padding:4px 10px 4px 10px;bottom:auto;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;font-size:12px;margin:2px 2px 6px 0px;}
+	a.qaBadge:visited, a.qaBadge:link{color: #fff;}
+	a.qaBadge:hover{background:#333;text-decoration:none;text-shadow:none;color:#ccc;}
+
+a.qaBadge span{display: inline-block;width: 22px;height: 16px;margin: 0px 0px -1px 0px;}
+	.bronze{background: url(images/bronze-badge.png) no-repeat left bottom;}
+	.silver{background: url(images/silver-badge.png) no-repeat left bottom;}
+	.gold{background: url(images/gold-badge.png) no-repeat left bottom;}
+
+.earnedBadge{background: url(images/accepted_large.png) no-repeat center;width:24px;height: 20px;display: inline-block;}
+span.qaMultiplier{float: right;color:#fff; font-weight:bold; font-size:12px;  background-color:#808080; padding:2px 4px 2px 4px;}
+.qaBadgeList{
+	padding: 8px 2px 2px 2px;
+}
+.qaBadgeDetails{
+	display:block; width: 100%;
+}
+
+.qaDialogWrapper{padding: 8px;}
+ul.wizardActions{overflow:hidden;clear:both;}
+	ul.wizardActions, ul.wizardActions li{list-style:none;padding:0px;}
+	ul.wizardActions li a{display:block;float:right;padding:8px;}
+	
+	input[type="text"].dnnSmall {min-width: 0px;width: 50px;}
+	
+.wizard {display:block; margin-bottom:-20px; overflow:auto;}
+	.wizard li {float:left; margin-right:10px;list-style-type:none;}
+	.wizard li a{
+		display:block;
+		background:#bbb;
+		width:30px;
+		padding:4px 0;
+		text-align:center; vertical-align:middle;
+				
+		border:1px solid #999;
+		-webkit-border-radius: 16px;
+		-moz-border-radius: 16px;
+		border-radius: 16px; 	
+		
+		-webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.15); 
+		
+		color:#fff;
+		font-weight:bold;
+		font-size:18px;
+		text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+	}
+	.wizard li a:hover, .wizard li a.active{
+		background:#777;
+		border:1px solid #555;
+	}
+		h2.WizardStepTitle{
+		font-size:28px; 
+		padding-bottom:5px;
+		margin-bottom:15px;
+		border-bottom:1px solid #ddd;
+		letter-spacing:-0.03em;
+	}
+	h2.WizardStepTitle strong{font-weight:bold;}
+
+/* Profile */
+.vsRow
+{
+	display: block;
+	width: 100%;
+	padding: 10px 4px 10px 4px;
+	background-color: #efefef;
+}
+
+/* Button Group Styles */
+		
+	/* Remove corners and add dividers to buttons in button group */
+	.buttonGroup .dnnTertiaryAction{
+		margin:0; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;
+		border-left:1px solid #fcfcfc; /*light*/
+		border-right:1px solid #c7c7c7; /*dark*/
+	}		
+	.buttonGroup .dnnTertiaryAction.active{border-right:1px solid #666;}
+	.buttonGroup .dnnTertiaryAction:active{border-left:1px solid #444;}
+	.buttonGroup .dnnTertiaryAction.disabled:hover{border-left:1px solid #fcfcfc; /*light*/}		
+	.eventMenu ul, .eventMenu li{display:block;list-style-type:none;float:right;padding-left: 2px;margin:0;}

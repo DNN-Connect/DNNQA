@@ -1,0 +1,490 @@
+﻿
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_SoftDelete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_SoftDelete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_GetSitemap') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Question_GetSitemap
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_KeywordSearch') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Question_KeywordSearch
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment_GetByDate') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Comment_GetByDate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_Get
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_GetByContentType') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Term_GetByContentType
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_GetByContentItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Term_GetByContentItem
+GO
+
+/* DROP FOR GOOD */
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Terms_GetHome') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Terms_GetHome
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentType') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentType
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentItem
+GO
+
+UPDATE  {databaseOwner}{objectQualifier}DNNQA_Setting
+SET     [Key] = 'CommentTemplate' ,
+		[Value] = '<html><body><h3><a href="[TITLELINK]">[TITLE]</a></h3><div style="padding:0 15px">[COMMENT]<p>by [AUTHOR]</p></div><div><p>If you no longer wish to receive emails, go here to <a href="[SUBSCRIBELINK]">unsubscribe</a>.</p></div></body></html>'
+WHERE   [Key] = 'PrimaryUrl'
+		AND TypeId = 3
+GO
+
+UPDATE {databaseOwner}{objectQualifier}ModuleSettings
+	SET SettingValue = '1'
+	WHERE SettingName = 'DNNQA_HomeTagTimeFrame'
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Post_SoftDelete]
+	@PostId INT ,
+	@PortalId INT
+AS 
+	UPDATE  {databaseOwner}{objectQualifier}DNNQA_Post
+	SET     Deleted = 1,
+			ContentItemId = 0
+	WHERE   PortalId = @PortalId
+			AND ( ( PostId = @PostId )
+				  OR ( ParentId = @PostId )
+				)
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Question_GetSitemap] @PortalId INT
+AS 
+	SELECT TOP ( 200 )
+			PostID ,
+			( SELECT    Title
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     PostID = vp.PostID
+			) AS Title ,
+			Body ,
+			Bounty ,
+			ParentID ,
+			PortalID ,
+			ViewCount ,
+			Score ,
+			Approved ,
+			ApprovedDate ,
+			Deleted ,
+			AnswerID ,
+			AnswerDate ,
+			Closed ,
+			ClosedDate ,
+			Protected ,
+			ProtectedDate ,
+			CreatedUserID ,
+			CreatedDate ,
+			LastModifiedUserID ,
+			LastModifiedDate ,
+			ContentItemID ,
+			Content ,
+			ContentTypeID ,
+			TabID ,
+			ModuleID ,
+			ContentKey ,
+			Indexed ,
+			CreatedByUserID ,
+			CreatedOnDate ,
+			LastModifiedByUserID ,
+			LastModifiedOnDate ,
+			( SELECT TOP ( 1 )
+						CreatedUserID
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ( PostID = vp.PostID
+						  OR ParentID = vp.PostID
+						)
+						AND Deleted = 0
+						AND Approved = 1
+			  ORDER BY  CreatedDate DESC
+			) AS LastApprovedUserID ,
+			( SELECT TOP ( 1 )
+						CreatedDate
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ( PostID = vp.PostID
+						  OR ParentID = vp.PostID
+						)
+						AND Deleted = 0
+						AND Approved = 1
+			  ORDER BY  CreatedDate DESC
+			) AS LastApprovedDate ,
+			( SELECT    COUNT(PostID)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     ( ParentID = vp.PostID )
+						AND ( ParentID <> 0 )
+						AND ( Approved = 1 )
+						AND ( Deleted = 0 )
+			) AS TotalAnswers ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = 1
+			) AS UpVotes ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = -1
+			) AS DownVotes ,
+			( SELECT    COUNT(PostID)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     PortalID = @PortalId
+						AND ParentID = 0
+						AND Deleted = 0
+			) AS TotalRecords
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Posts vp
+	WHERE   PortalID = @PortalId
+			AND ParentID = 0
+			AND Deleted = 0
+			AND Approved = 1
+	ORDER BY CreatedOnDate DESC
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Question_KeywordSearch]
+	@ModuleId INT ,
+	@Keyword NVARCHAR(150)
+AS 
+	SELECT  PostId ,
+			( SELECT    Title
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     PostId = vp.PostId
+			) AS Title ,
+			Body ,
+			Bounty ,
+			ParentId ,
+			PortalId ,
+			ViewCount ,
+			Score ,
+			Approved ,
+			ApprovedDate ,
+			Deleted ,
+			AnswerId ,
+			AnswerDate ,
+			Closed ,
+			ClosedDate ,
+			Protected ,
+			ProtectedDate ,
+			CreatedUserId ,
+			CreatedDate ,
+			LastModifiedUserId ,
+			LastModifiedDate ,
+			ContentItemId ,
+			Content ,
+			ContentTypeId ,
+			TabId ,
+			ModuleId ,
+			ContentKey ,
+			Indexed ,
+			CreatedByUserId ,
+			CreatedOnDate ,
+			LastModifiedByUserId ,
+			LastModifiedOnDate ,
+			( SELECT TOP ( 1 )
+						CreatedUserID
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ( PostID = vp.PostID
+						  OR ParentID = vp.PostID
+						)
+						AND Deleted = 0
+						AND Approved = 1
+			  ORDER BY  CreatedDate DESC
+			) AS LastApprovedUserID ,
+			( SELECT TOP ( 1 )
+						CreatedDate
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ( PostID = vp.PostID
+						  OR ParentID = vp.PostID
+						)
+						AND Deleted = 0
+						AND Approved = 1
+			  ORDER BY  CreatedDate DESC
+			) AS LastApprovedDate ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     ( ParentId = vp.PostId )
+						AND ( ParentId <> 0 )
+						AND ( Approved = 1 )
+						AND ( Deleted = 0 )
+			) AS TotalAnswers ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = 1
+			) AS UpVotes ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = -1
+			) AS DownVotes ,
+			( SELECT    COUNT(PostID)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ModuleId = @ModuleId
+						AND ParentId = 0
+						AND Deleted = 0
+						AND Approved = 1
+						AND ( @Keyword IS NULL
+							  OR ( Title LIKE '%' + @Keyword + '%'
+								   OR Body LIKE '%' + @Keyword + '%'
+								 )
+							)
+			) AS TotalRecords
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Posts vp
+	WHERE   ModuleId = @ModuleId
+			AND ParentId = 0
+			AND Deleted = 0
+			AND Approved = 1
+			AND ( @Keyword IS NULL
+				  OR ( Title LIKE '%' + @Keyword + '%'
+					   OR Body LIKE '%' + @Keyword + '%'
+					 )
+				)
+	ORDER BY LastApprovedDate DESC
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Comment_GetByDate]
+	@StartDate DATETIME ,
+	@EndDate DATETIME
+AS 
+	BEGIN
+		SELECT  *
+		FROM    {databaseOwner}{objectQualifier}DNNQA_Comment
+		WHERE   CreatedOnDate >= @StartDate
+				AND CreatedOnDate < @EndDate
+		ORDER BY CreatedOnDate ASC
+	END
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Post_Get]
+	@PostId INT ,
+	@PortalId INT
+AS 
+	SELECT  PostId ,
+			Title ,
+			Body ,
+			Bounty ,
+			ParentId ,
+			PortalId ,
+			ViewCount ,
+			Score ,
+			Approved ,
+			ApprovedDate ,
+			Deleted ,
+			AnswerId ,
+			AnswerDate ,
+			Closed ,
+			ClosedDate ,
+			Protected ,
+			ProtectedDate ,
+			CreatedUserId ,
+			CreatedDate ,
+			LastModifiedUserId ,
+			LastModifiedDate ,
+			ContentItemId ,
+			Content ,
+			ContentTypeID ,
+			TabID ,
+			ModuleID ,
+			ContentKey ,
+			Indexed ,
+			CreatedByUserId ,
+			CreatedOnDate ,
+			LastModifiedByUserID ,
+			LastModifiedOnDate ,
+			( SELECT    LastModifiedUserId
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     PostId = vp.PostId
+						AND Deleted = 0
+			) AS LastApprovedUserId ,
+			( SELECT    LastModifiedDate
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     PostId = vp.PostId
+						AND Deleted = 0
+			) AS LastApprovedDate ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     ( ParentId = vp.PostId )
+						AND ( ParentId <> 0 )
+						AND ( Approved = 1 )
+						AND ( Deleted = 0 )
+			) AS TotalAnswers ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = 1
+			) AS UpVotes ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = -1
+			) AS DownVotes ,
+			1 AS TotalRecords
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Posts vp
+	WHERE   PostId = @PostId
+			AND ( @PortalId IS NULL
+				  OR ( PortalId = @PortalId )
+				)
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_GetByContentItem]
+	@ContentItemId INT ,
+	@VocabularyId INT
+AS 
+	SELECT TOP 1000
+			TermId ,
+			Name ,
+			ParentTermId ,
+			[Description] ,
+			[Weight] ,
+			( SELECT    CreatedOnDate
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermId = T.TermId
+			) AS CreatedOnDate ,
+			( SELECT    CreatedByUserId
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermId = T.TermId
+			) AS CreatedByUserId ,
+			( SELECT    LastModifiedOnDate
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermId = T.TermId
+			) AS LastModifiedOnDate ,
+			( SELECT    LastModifiedByUserId
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermId = T.TermId
+			) AS LastModifiedByUserId ,
+			VocabularyId ,
+			TermLeft ,
+			TermRight ,
+			( SELECT    COUNT(TermId)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms
+			  WHERE     TermId = VRT.TermId
+						AND ContentItemId = @ContentItemId
+			) AS TotalTermUsage ,
+			( SELECT    COUNT(TermId)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms
+			  WHERE     TermId = VRT.TermId
+						AND ContentItemId = @ContentItemId
+						AND CreatedOnDate > DATEDIFF(day, GETDATE(), -30)
+			) AS MonthTermUsage ,
+			( SELECT    COUNT(TermId)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms
+			  WHERE     TermId = VRT.TermId
+						AND ContentItemId = @ContentItemId
+						AND CreatedOnDate > DATEDIFF(day, GETDATE(), -7)
+			) AS WeekTermUsage ,
+			( SELECT    COUNT(TermId)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms
+			  WHERE     TermId = VRT.TermId
+						AND ContentItemId = @ContentItemId
+						AND CreatedOnDate > DATEDIFF(day, GETDATE(), -1)
+			) AS DayTermUsage
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Terms AS VRT
+	WHERE   ContentItemId = @ContentItemId
+			AND VocabularyID = @VocabularyId
+	GROUP BY TermId ,
+			Name ,
+			ParentTermId ,
+			[Description] ,
+			[Weight] ,
+			VocabularyId ,
+			TermLeft ,
+			TermRight
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Term_GetByContentType]
+	@PortalId INT ,
+	@ContentTypeId INT ,
+	@ModuleId INT ,
+	@VocabularyId INT
+AS 
+	SELECT TOP 1000
+			TermID ,
+			Name ,
+			ParentTermID ,
+			[Description] ,
+			[Weight] ,
+			( SELECT    CreatedOnDate
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermID = T.TermID
+			) AS CreatedOnDate ,
+			( SELECT    CreatedByUserId
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermID = T.TermID
+			) AS CreatedByUserId ,
+			( SELECT    LastModifiedOnDate
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermID = T.TermID
+			) AS LastModifiedOnDate ,
+			( SELECT    LastModifiedByUserId
+			  FROM      {databaseOwner}{objectQualifier}Taxonomy_Terms T
+			  WHERE     VRT.TermID = T.TermID
+			) AS LastModifiedByUserId ,
+			VocabularyID ,
+			TermLeft ,
+			TermRight ,
+			( SELECT    COUNT(TermID)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms T
+						INNER JOIN {databaseOwner}{objectQualifier}DNNQA_Post P ON T.ContentItemID = P.ContentItemId
+			  WHERE     TermID = VRT.TermID
+						AND ContentTypeID = @ContentTypeID
+						AND T.PortalID = @PortalID
+						AND ModuleID = @ModuleID
+						AND P.ParentId = 0
+			) AS TotalTermUsage ,
+			( SELECT    COUNT(TermID)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms T
+						INNER JOIN {databaseOwner}{objectQualifier}DNNQA_Post P ON T.ContentItemID = P.ContentItemId
+			  WHERE     TermID = VRT.TermID
+						AND ContentTypeID = @ContentTypeID
+						AND T.PortalID = @PortalID
+						AND ModuleID = @ModuleID
+						AND CreatedOnDate > DATEADD(day, -30, GETDATE())
+						AND P.ParentId = 0
+			) AS MonthTermUsage ,
+			( SELECT    COUNT(TermID)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms T
+						INNER JOIN {databaseOwner}{objectQualifier}DNNQA_Post P ON T.ContentItemID = P.ContentItemId
+			  WHERE     TermID = VRT.TermID
+						AND ContentTypeID = @ContentTypeID
+						AND T.PortalID = @PortalID
+						AND ModuleID = @ModuleID
+						AND CreatedOnDate > DATEADD(day, -7, GETDATE())
+						AND P.ParentId = 0
+			) AS WeekTermUsage ,
+			( SELECT    COUNT(TermID)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Terms T
+						INNER JOIN {databaseOwner}{objectQualifier}DNNQA_Post P ON T.ContentItemID = P.ContentItemId
+			  WHERE     TermID = VRT.TermID
+						AND ContentTypeID = @ContentTypeID
+						AND T.PortalID = @PortalID
+						AND ModuleID = @ModuleID
+						AND CreatedOnDate > DATEADD(day, -1, GETDATE())
+						AND P.ParentId = 0
+			) AS DayTermUsage
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Terms AS VRT
+	WHERE   VRT.PortalID = @PortalID
+			AND VocabularyID = @VocabularyId
+			AND ContentTypeID = @ContentTypeID
+			AND ModuleID = @ModuleID
+	GROUP BY TermID ,
+			Name ,
+			ParentTermID ,
+			[Description] ,
+			[Weight] ,
+			VocabularyID ,
+			TermLeft ,
+			TermRight
+GO

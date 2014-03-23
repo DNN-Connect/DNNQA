@@ -1,0 +1,369 @@
+﻿
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Vote_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Vote_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Vote_GetPost') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Vote_GetPost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_GetHome') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Question_GetHome
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_TermSearch') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Question_TermSearch
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Post_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_UpdateViewCount') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Post_UpdateViewCount
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_GetAnswers') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Post_GetAnswers
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Post_Get
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_Update') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Post_Update
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Post_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_SearchTitle') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Question_SearchTitle
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentType') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentType
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Tags_GetByContentItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_GetUserAnswered') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}DNNQA_Question_GetUserAnswered
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_SearchByUser') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Question_SearchByUser
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscription_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Subscription_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_DeleteUserPost') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscription_DeleteUserPost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription_GetUser') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Subscription_GetUser
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_AcceptAnswer') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_AcceptAnswer
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_History_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_History_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_History_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_History_Get
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_History_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_History_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Setting_GetPortal') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Setting_GetPortal
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Get
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Vote_GetTerm') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Vote_GetTerm
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Setting_Update') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Setting_Update
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_Get
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Replaced') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Replaced
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Comment_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment_GetPost') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Comment_GetPost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log_GetByKey') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log_GetByKey
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_ContentItem_GetByTypeAndCreated') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_ContentItem_GetByTypeAndCreated
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscribers_GetByContentItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscribers_GetByContentItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_UpdateScheduleItemSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_UpdateScheduleItemSetting
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_GetUsersLast') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_GetUsersLast
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_SoftDelete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_SoftDelete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_GetByContentItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Question_GetByContentItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_GetAnswersByDate') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Post_GetAnswersByDate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscribers_GetByQuestion') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Subscribers_GetByQuestion
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_SetMessage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_SetMessage
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_ClearMessage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_User_Score_ClearMessage
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_GetSitemap') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Question_GetSitemap
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment_GetByDate') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE {databaseOwner}{objectQualifier}DNNQA_Comment_GetByDate
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_GetPortal') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_GetPortal
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_Update') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_Update
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Badge_GetRecipients') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_User_Badge_GetRecipients
+GO
+
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_GetByPortal') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_User_Score_GetByPortal
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Get') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_User_Score_Log_Get
+GO
+
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_GetUserAsked') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Question_GetUserAsked
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_KeywordSearch') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Question_KeywordSearch
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_GetByContentItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Term_GetByContentItem
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_GetByContentType') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Term_GetByContentType
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}vw_DNNQA_Posts') and OBJECTPROPERTY(id, N'IsView') = 1)
+	DROP VIEW {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}vw_DNNQA_Terms') and OBJECTPROPERTY(id, N'IsView') = 1)
+	DROP VIEW {databaseOwner}{objectQualifier}vw_DNNQA_Terms
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}vw_DNNQA_User_Type_Votes') and OBJECTPROPERTY(id, N'IsView') = 1)
+	DROP VIEW {databaseOwner}{objectQualifier}vw_DNNQA_User_Type_Votes
+GO
+
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score_Log') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score_Log
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}DNNQA_Badge') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Badge DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}DNNQA_Badge
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}Users') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Badge DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}Users
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Badge') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_User_Badge
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Badge_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Badge DROP CONSTRAINT FK_{objectQualifier}DNNQA_Badge_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Badge
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Taxonomy_Terms') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym DROP CONSTRAINT FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Taxonomy_Terms
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym DROP CONSTRAINT FK_{objectQualifier}DNNQA_Term_Synonym_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_Synonym') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Term_Synonym
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Moderation_Log_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Moderation_Log DROP CONSTRAINT FK_{objectQualifier}DNNQA_Moderation_Log_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Moderation_Log') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Moderation_Log
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Users') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Score_{objectQualifier}Users
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Score') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_User_Score
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Setting_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting DROP CONSTRAINT FK_{objectQualifier}DNNQA_Setting_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Setting') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Setting
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Comment_{objectQualifier}DNNQA_Post') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Comment DROP CONSTRAINT FK_{objectQualifier}DNNQA_Comment_{objectQualifier}DNNQA_Post
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Comment') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Comment
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Post_History_{objectQualifier}DNNQA_Post') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Post_History DROP CONSTRAINT FK_{objectQualifier}DNNQA_Post_History_{objectQualifier}DNNQA_Post
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post_History') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Post_History
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Term_History_{objectQualifier}Taxonomy_Terms') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Term_History DROP CONSTRAINT FK_{objectQualifier}DNNQA_Term_History_{objectQualifier}Taxonomy_Terms
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Term_History') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Term_History
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Subscription_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Subscription DROP CONSTRAINT FK_{objectQualifier}DNNQA_Subscription_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Subscription') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Subscription
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Vote') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Vote
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Post_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Post DROP CONSTRAINT FK_{objectQualifier}DNNQA_Post_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Post') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Post
+GO
+
+/* Content Item Cleanup */
+DECLARE @ContentTypeID INT
+SET @ContentTypeID = ( SELECT   ContentTypeID
+					   FROM     {databaseOwner}{objectQualifier}ContentTypes
+					   WHERE    ContentType = 'DNN_DNNQA_Question'
+					 )
+
+DELETE  {databaseOwner}{objectQualifier}ContentItems
+WHERE   ContentTypeID = @ContentTypeID

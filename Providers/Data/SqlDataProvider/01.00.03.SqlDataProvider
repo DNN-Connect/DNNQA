@@ -1,0 +1,295 @@
+﻿
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Question_GetHome') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Question_GetHome
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_GetPortal') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_GetPortal
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_Add
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_Update') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_Update
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge_Delete') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_Badge_Delete
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Badge_GetRecipients') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	DROP PROCEDURE  {databaseOwner}{objectQualifier}DNNQA_User_Badge_GetRecipients
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}vw_DNNQA_User_Type_Votes') and OBJECTPROPERTY(id, N'IsView') = 1)
+	DROP VIEW {databaseOwner}{objectQualifier}vw_DNNQA_User_Type_Votes
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}DNNQA_Badge') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Badge DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}DNNQA_Badge
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}Users') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_User_Badge DROP CONSTRAINT FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}Users
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_User_Badge') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_User_Badge
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'FK_{objectQualifier}DNNQA_Badge_{objectQualifier}Portals') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Badge DROP CONSTRAINT FK_{objectQualifier}DNNQA_Badge_{objectQualifier}Portals
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}DNNQA_Badge') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	DROP TABLE {databaseOwner}{objectQualifier}DNNQA_Badge
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_Badge]
+(
+	[BadgeId] [int] IDENTITY(1,1) NOT NULL,
+	[Key] [nvarchar](100) NOT NULL,
+	[PortalId] [int] NOT NULL,
+	[TierId] [int] NOT NULL,
+	[Icon] [nvarchar](255) NULL,
+	[RepPoints] [int] NOT NULL,
+	[Active] [bit] NOT NULL,
+	[Awarded] [int] NOT NULL,
+	[TriggerActionId] [int] NULL,
+	[TriggerActions] [nvarchar](100) NULL,
+	[TriggerSproc] [nvarchar](100) NULL,
+	[TriggerSql] [nvarchar](max) NULL,
+	[TriggerCount] [int] NOT NULL,
+	[TriggerTimeCount] [int] NOT NULL,
+	[TriggerTimeUnit] [nvarchar](1) NOT NULL,
+)
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNQA_Badge]  
+		WITH NOCHECK
+	ADD CONSTRAINT PK_{objectQualifier}DNNQA_Badge PRIMARY KEY CLUSTERED ( [BadgeId] )
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNQA_Badge]  
+	ADD  CONSTRAINT FK_{objectQualifier}DNNQA_Badge_{objectQualifier}Portals FOREIGN KEY ( [PortalId] ) REFERENCES {databaseOwner}{objectQualifier}Portals ( [PortalID] ) 
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+GO
+
+CREATE TABLE {databaseOwner}[{objectQualifier}DNNQA_User_Badge]
+(
+	[BadgeId] [int] NOT NULL,
+	[UserId] [int] NOT NULL,
+	[PortalId] [int] NOT NULL
+)
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNQA_User_Badge]
+	ADD CONSTRAINT FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}DNNQA_Badge FOREIGN KEY ( [BadgeId] ) REFERENCES {databaseOwner}{objectQualifier}DNNQA_Badge ( [BadgeId] ) 
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}DNNQA_User_Badge]
+	ADD CONSTRAINT FK_{objectQualifier}DNNQA_User_Badge_{objectQualifier}Users FOREIGN KEY ( [UserId] ) REFERENCES {databaseOwner}{objectQualifier}Users ( [UserID] ) 
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+GO
+
+CREATE VIEW {databaseOwner}[{objectQualifier}vw_DNNQA_User_Type_Votes]
+AS
+	SELECT  COUNT(V.CreatedByUserId) AS QuestionAnswersVoteCount ,
+			V.CreatedByUserId ,
+			P.ParentId ,
+			V.VoteTypeId ,
+			P.PortalId
+	FROM    {databaseOwner}{objectQualifier}DNNQA_Post P
+			INNER JOIN {databaseOwner}{objectQualifier}DNNQA_Vote V ON P.PostId = V.PostId
+	GROUP BY V.CreatedByUserId ,
+			P.ParentId ,
+			V.VoteTypeId ,
+			P.PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Question_GetHome]
+	@ModuleID INT ,
+	@ExcludeCount INT ,
+	@Score INT
+AS 
+	SELECT TOP ( 200 )
+			PostID ,
+			( SELECT    Title
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     PostID = vp.PostID
+			) AS Title ,
+			Body ,
+			Bounty ,
+			ParentID ,
+			PortalID ,
+			ViewCount ,
+			Score ,
+			Approved ,
+			ApprovedDate ,
+			Deleted ,
+			AnswerID ,
+			AnswerDate ,
+			Closed ,
+			ClosedDate ,
+			Protected ,
+			ProtectedDate ,
+			CreatedUserID ,
+			CreatedDate ,
+			LastModifiedUserID ,
+			LastModifiedDate ,
+			ContentItemID ,
+			Content ,
+			ContentTypeID ,
+			TabID ,
+			ModuleID ,
+			ContentKey ,
+			Indexed ,
+			CreatedByUserID ,
+			CreatedOnDate ,
+			LastModifiedByUserID ,
+			LastModifiedOnDate ,
+			( SELECT TOP ( 1 )
+						CreatedUserID
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ( PostID = vp.PostID
+						  OR ParentID = vp.PostID
+						)
+						AND Deleted = 0
+						AND Approved = 1
+			  ORDER BY  CreatedDate DESC
+			) AS LastApprovedUserID ,
+			( SELECT TOP ( 1 )
+						CreatedDate
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ( PostID = vp.PostID
+						  OR ParentID = vp.PostID
+						)
+						AND Deleted = 0
+						AND Approved = 1
+			  ORDER BY  CreatedDate DESC
+			) AS LastApprovedDate ,
+			( SELECT    COUNT(PostID)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Post
+			  WHERE     ( ParentID = vp.PostID )
+						AND ( ParentID <> 0 )
+						AND ( Approved = 1 )
+						AND ( Deleted = 0 )
+			) AS TotalAnswers ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = 1
+			) AS UpVotes ,
+			( SELECT    COUNT(PostId)
+			  FROM      {databaseOwner}{objectQualifier}DNNQA_Vote
+			  WHERE     PostID = vp.PostID
+						AND VoteTypeID = -1
+			) AS DownVotes ,
+			( SELECT    COUNT(PostID)
+			  FROM      {databaseOwner}{objectQualifier}vw_DNNQA_Posts
+			  WHERE     ModuleID = @ModuleID
+						AND ParentID = 0
+						AND Deleted = 0
+			) AS TotalRecords
+	FROM    {databaseOwner}{objectQualifier}vw_DNNQA_Posts vp
+	WHERE   ModuleID = @ModuleID
+			AND ParentID = 0
+			AND Deleted = 0
+			AND Approved = 1
+			AND Score >= @Score
+	ORDER BY CreatedOnDate DESC
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Badge_GetPortal] @PortalId INT
+AS 
+	SELECT  *
+	FROM    {databaseOwner}{objectQualifier}DNNQA_Badge
+	WHERE   PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Badge_Add]
+	@Key NVARCHAR(100) ,
+	@PortalId INT ,
+	@TierId INT ,
+	@TriggerActionId INT ,
+	@TriggerActions NVARCHAR(100) ,
+	@TriggerSproc NVARCHAR(100) ,
+	@TriggerSql NVARCHAR(MAX) ,
+	@TriggerCount INT ,
+	@TriggerTimeCount INT ,
+	@TriggerTimeUnit NVARCHAR(1)
+AS 
+	INSERT  {databaseOwner}{objectQualifier}DNNQA_Badge
+			( [Key] ,
+			  PortalId ,
+			  TierId ,
+			  Awarded ,
+			  TriggerActionId ,
+			  TriggerActions ,
+			  TriggerSproc ,
+			  TriggerSql ,
+			  TriggerCount ,
+			  TriggerTimeCount ,
+			  TriggerTimeUnit 
+			)
+	VALUES  ( @Key ,
+			  @PortalId ,
+			  @TierId ,
+			  0 ,
+			  @TriggerActionId ,
+			  @TriggerActions ,
+			  @TriggerSproc ,
+			  @TriggerSql ,
+			  @TriggerCount ,
+			  @TriggerTimeCount ,
+			  @TriggerTimeUnit 
+			)
+	SELECT  SCOPE_IDENTITY()
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Badge_Update]
+	@BadgeId INT ,
+	@PortalId INT ,
+	@TierId INT ,
+	@TriggerActionId INT ,
+	@TriggerActions NVARCHAR(100) ,
+	@TriggerSproc NVARCHAR(100) ,
+	@TriggerSql NVARCHAR(MAX) ,
+	@TriggerCount INT ,
+	@TriggerTimeCount INT ,
+	@TriggerTimeUnit NVARCHAR(1)
+AS 
+	UPDATE  {databaseOwner}{objectQualifier}DNNQA_Badge
+	SET     TierId = @TierId ,
+			TriggerActionId = @TriggerActionId ,
+			TriggerActions = @TriggerActions ,
+			TriggerSproc = @TriggerSproc ,
+			TriggerSql = @TriggerSql ,
+			TriggerCount = @TriggerCount ,
+			TriggerTimeCount = @TriggerTimeCount ,
+			TriggerTimeUnit = @TriggerTimeUnit
+	WHERE   PortalId = @PortalId
+			AND BadgeId = @BadgeId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_Badge_Delete]
+	@BadgeId INT ,
+	@PortalId INT
+AS 
+	DELETE  {databaseOwner}{objectQualifier}DNNQA_Badge
+	WHERE   BadgeId = @BadgeId
+			AND PortalId = @PortalId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}DNNQA_User_Badge_GetRecipients] @BadgeId INT
+AS 
+	SELECT  *
+	FROM    {databaseOwner}{objectQualifier}DNNQA_User_Badge
+	WHERE   BadgeId = @BadgeId
+GO

@@ -1,0 +1,161 @@
+<dotnetnuke type="Package" version="5.0">
+	<packages>
+		<package name="DNNQA" type="Module" version="01.01.01">
+			<friendlyname>DNN Q and A</friendlyname>
+			<description>A DotNetNuke Questions and Answers module.</description>
+			<iconFile>~/DesktopModules/DNNQA/images/QandA.png</iconFile>
+			<owner>
+				<name>DotNetNuke Q and A Module</name>
+				<organization>DotNetNuke Corporation</organization>
+				<url>dnnqanda.codeplex.com</url>
+				<email />
+			</owner>
+			<license src="License.txt"></license>
+			<releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+			<dependencies>
+				<dependency type="CoreVersion">06.02.00</dependency>
+			</dependencies>
+			<components>
+				<component type="Module">
+					<desktopModule>
+						<moduleName>DNNQA</moduleName>
+						<foldername>DNNQA</foldername>
+						<businessControllerClass />
+						<supportedFeatures />
+						<moduleDefinitions>
+							<moduleDefinition>
+								<friendlyName>DNNQA</friendlyName>
+								<defaultCacheTime>-1</defaultCacheTime>
+								<moduleControls>
+									<moduleControl>
+										<controlKey />
+										<controlSrc>DesktopModules/DNNQA/Dispatch.ascx</controlSrc>
+										<controlTitle />
+										<controlType>View</controlType>
+										<iconFile />
+										<helpUrl />
+										<supportsPartialRendering>True</supportsPartialRendering>
+										<supportsPopUps>False</supportsPopUps>
+									</moduleControl>
+									<moduleControl>
+										<controlKey>Settings</controlKey>
+										<controlSrc>DesktopModules/DNNQA/Settings.ascx</controlSrc>
+										<controlTitle />
+										<controlType>Edit</controlType>
+										<iconFile />
+										<helpUrl />
+										<supportsPartialRendering>True</supportsPartialRendering>
+										<supportsPopUps>True</supportsPopUps>
+									</moduleControl>
+									<moduleControl>
+										<controlKey>ManagePrivileges</controlKey>
+										<controlSrc>DesktopModules/DNNQA/PrivilegeManager.ascx</controlSrc>
+										<controlTitle />
+										<controlType>Admin</controlType>
+										<iconFile />
+										<helpUrl />
+										<supportsPartialRendering>False</supportsPartialRendering>
+										<supportsPopUps>False</supportsPopUps>
+									</moduleControl>
+									<moduleControl>
+										<controlKey>ManageScoring</controlKey>
+										<controlSrc>DesktopModules/DNNQA/ScoringManager.ascx</controlSrc>
+										<controlTitle />
+										<controlType>Admin</controlType>
+										<iconFile />
+										<helpUrl />
+										<supportsPartialRendering>False</supportsPartialRendering>
+										<supportsPopUps>False</supportsPopUps>
+									</moduleControl>
+								</moduleControls>
+								<permissions>
+									<permission code="DNNQANDA" key="MODERATE" name="Moderate" />
+								</permissions>
+							</moduleDefinition>
+						</moduleDefinitions>
+					</desktopModule>
+				</component>
+				<component type="Assembly">
+					<assemblies>
+						<assembly>
+							<name>DotNetNuke.Modules.DNNQA.dll</name>
+							<sourceFileName>DotNetNuke.Modules.DNNQA.dll</sourceFileName>
+							<version>01.01.01</version>
+						</assembly>
+					</assemblies>
+				</component>
+				<component type="File">
+					<files>
+						<basePath>DesktopModules\DNNQA\Documentation</basePath>
+						<file>
+							<name>License.txt</name>
+						</file>
+						<file>
+							<name>ReleaseNotes.txt</name>
+						</file>
+					</files>
+				</component>
+				<component type="Script">
+					<scripts>
+						<basePath>DesktopModules\DNNQA\Providers\Data\SqlDataProvider</basePath>
+						<script type="Install">
+							<name>01.00.00.SqlDataProvider</name>
+							<version>01.00.00</version>
+						</script>
+						<script type="Install">
+							<name>01.00.01.SqlDataProvider</name>
+							<version>01.00.01</version>
+						</script>
+						<script type="Install">
+							<name>01.00.02.SqlDataProvider</name>
+							<version>01.00.02</version>
+						</script>
+						<script type="Install">
+							<name>01.00.03.SqlDataProvider</name>
+							<version>01.00.03</version>
+						</script>
+						<script type="Install">
+							<name>01.01.00.SqlDataProvider</name>
+							<version>01.01.00</version>
+						</script>
+						<script type="Install">
+							<name>01.01.01.SqlDataProvider</name>
+							<version>01.01.01</version>
+						</script>
+						<script type="UnInstall">
+							<name>Uninstall.SqlDataProvider</name>
+							<version>01.01.01</version>
+						</script>
+					</scripts>
+				</component>
+				<component type="ResourceFile">
+					<resourceFiles>
+						<basePath>DesktopModules\DNNQA</basePath>
+						<resourceFile>
+							<name>Resources.zip</name>
+							<sourceFileName>Resources.zip</sourceFileName>
+						</resourceFile>
+					</resourceFiles>
+				</component>
+				<component type="Config">
+				  <config>
+					<configFile>web.config</configFile>
+					<install>
+					  <configuration>
+						  <nodes />
+					  </configuration>
+					</install>
+					<uninstall>
+					  <configuration>
+						<nodes>
+						  <node path="/configuration/system.webServer/modules/add[@name = 'DNNQAUrlRewrite']" action="remove" />
+						  <node path="/configuration/system.web/httpModules/add[@name = 'DNNQAUrlRewrite']" action="remove" />
+						</nodes>
+					  </configuration>
+					</uninstall>
+				  </config>
+				</component>
+			</components>
+		</package>
+	</packages>
+</dotnetnuke>

@@ -1,0 +1,35 @@
+﻿/************************************************************/
+/*****                  Test Data                       *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Create Mock Modules **/
+--  {databaseOwner}{objectQualifier}Modules_SetUpFixture(70);
+INSERT INTO  {databaseOwner}[{objectQualifier}Modules] VALUES (70)
+
+GO
+
+INSERT INTO  {databaseOwner}[{objectQualifier}Users] VALUES (40, 'Some', 'User')
+
+GO
+
+INSERT INTO  {databaseOwner}[{objectQualifier}YourCompany_TestDrivenDNNModule] VALUES (70, 'Content', 40 , GETDATE())
+
+GO
+
+INSERT INTO  {databaseOwner}[{objectQualifier}YourCompany_TestDrivenDNNModule] VALUES (70, 'This is sample content', 40 , GETDATE())
+
+GO
+
+INSERT INTO  {databaseOwner}[{objectQualifier}YourCompany_TestDrivenDNNModule] VALUES (70, 'This is more sample content', 40 , GETDATE())
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

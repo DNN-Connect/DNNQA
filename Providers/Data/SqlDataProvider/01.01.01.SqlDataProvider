@@ -1,0 +1,30 @@
+﻿
+if exists (select * from dbo.sysobjects where id = object_id(N'PK_{objectQualifier}DNNQA_Setting') and OBJECTPROPERTY(id, N'IsConstraint') = 1)
+	ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting DROP CONSTRAINT PK_{objectQualifier}DNNQA_Setting
+GO
+
+IF EXISTS (SELECT * FROM SYS.COLUMNS WHERE NAME = N'SettingId' AND OBJECT_ID = OBJECT_ID(N'{databaseOwner}{objectQualifier}DNNQA_Setting'))
+	BEGIN
+	   ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting DROP COLUMN [SettingId] 
+	END
+GO
+
+IF EXISTS (SELECT * FROM SYS.COLUMNS WHERE NAME = N'SettingsId' AND OBJECT_ID = OBJECT_ID(N'{databaseOwner}{objectQualifier}DNNQA_Setting'))
+	BEGIN
+	   ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting DROP COLUMN [SettingsId] 
+	END
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.COLUMNS WHERE NAME = N'SettingId' AND OBJECT_ID = OBJECT_ID(N'{databaseOwner}{objectQualifier}DNNQA_Setting'))
+	BEGIN
+		ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting WITH NOCHECK ADD [SettingId] [int] IDENTITY(1,1) NOT NULL
+	END
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.COLUMNS WHERE NAME = N'SettingsId' AND OBJECT_ID = OBJECT_ID(N'{databaseOwner}{objectQualifier}DNNQA_Setting'))
+	BEGIN
+		ALTER TABLE {databaseOwner}{objectQualifier}DNNQA_Setting
+			WITH NOCHECK
+			ADD CONSTRAINT PK_{objectQualifier}DNNQA_Setting PRIMARY KEY CLUSTERED ( [SettingId] )
+	END
+GO

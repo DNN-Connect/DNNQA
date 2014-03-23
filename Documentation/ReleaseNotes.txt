@@ -1,0 +1,19 @@
+<h3>DotNetNuke Questions & Answers</h3>
+<p class="Contributor">
+	DotNetNuke&reg; <br />
+	<a href="mailto:support@dotnetnuke.com">support@dotnetnuke.com</a><br />
+	<a href=http://www.dotnetnuke.com>http://www.dotnetnuke.com</a><br />
+</p>
+<hr/>
+<div class="License">
+	<p class="Owner">
+		<h3>About DotNetNuke Questions & Answers</h3>
+		<strong>Verion 1.1.1</strong><br /><br />		
+		This release requires DotNetNuke core 6.2 or greater. <br /><br />
+		<ul>
+			<li>Corrected links seen seen in Profile, were not pointing to proper question id (for answers).</li>
+			<li>Corrected a problem seen when saving settings.</li>
+			<li>Added a search icon to the navigation search textbox for usability reasons.</li>
+		</ul>
+	</p>
+</div>

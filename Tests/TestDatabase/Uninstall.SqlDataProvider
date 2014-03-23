@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop Tables **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_TestDrivenDNNModule] DROP CONSTRAINT [FK_{objectQualifier}YourCompany_TestDrivenDNNModule_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_TestDrivenDNNModule] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_TestDrivenDNNModule]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_TestDrivenDNNModule].[IX_{objectQualifier}YourCompany_TestDrivenDNNModule]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_TestDrivenDNNModule]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetTestDrivenDNNModules]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetTestDrivenDNNModule]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddTestDrivenDNNModule]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateTestDrivenDNNModule]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteTestDrivenDNNModule]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

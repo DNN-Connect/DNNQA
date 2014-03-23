@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46920BAD-65EF-467C-A436-686097DEACF9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetNuke.DNNQA</RootNamespace>
+    <AssemblyName>DotNetNuke.Modules.DNNQA</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.HttpModules, Version=6.1.2.98, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\DotNetNuke.HttpModules.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web, Version=5.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\DotNetNuke.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke.Web.Client, Version=6.1.0.272, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\DotNetNuke.Web.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetNuke.WebUtility, Version=4.2.0.185, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\DotNetNuke.WebUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.UI, Version=2011.1.519.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebFormsMvp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=537f18701145dff0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\WebFormsMvp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Common\Caching.cs" />
+    <Compile Include="Components\Common\QaSettings.cs" />
+    <Compile Include="Components\Common\Sorting.cs" />
+    <Compile Include="Components\Common\UrlShorteningService.cs" />
+    <Compile Include="Components\Entities\UserBadgeInfo.cs" />
+    <Compile Include="Components\Entities\TermSynonymInfo.cs" />
+    <Compile Include="Components\Integration\Content.cs" />
+    <Compile Include="Components\Integration\Journal.cs" />
+    <Compile Include="Components\Integration\Notifications.cs" />
+    <Compile Include="Components\Integration\Terms.cs" />
+    <Compile Include="Components\Models\PrivilegeManagerModel.cs" />
+    <Compile Include="Components\Models\ScoringManagerModel.cs" />
+    <Compile Include="Components\Models\ProfileModel.cs" />
+    <Compile Include="Components\Models\EditPostModel.cs" />
+    <Compile Include="Components\Modules\UrlModule.cs" />
+    <Compile Include="Components\Presenters\PrivilegeManagerPresenter.cs" />
+    <Compile Include="Components\Presenters\ScoringManagerPresenter.cs" />
+    <Compile Include="Components\Presenters\ProfilePresenter.cs" />
+    <Compile Include="Components\Presenters\EditPostPresenter.cs" />
+    <Compile Include="Components\Services\QAServiceController.cs" />
+    <Compile Include="Components\Tasks\Emailer.cs" />
+    <Compile Include="Components\Views\IPrivilegeManagerView.cs" />
+    <Compile Include="Components\Views\IScoringManagerView.cs" />
+    <Compile Include="Components\Views\IProfileView.cs" />
+    <Compile Include="Components\Views\IEditPostView.cs" />
+    <Compile Include="Controls\Comments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrivilegeManager.ascx.cs">
+      <DependentUpon>PrivilegeManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivilegeManager.ascx.designer.cs">
+      <DependentUpon>PrivilegeManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.ascx.cs">
+      <DependentUpon>Profile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.ascx.designer.cs">
+      <DependentUpon>Profile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoringManager.ascx.cs">
+      <DependentUpon>ScoringManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScoringManager.ascx.designer.cs">
+      <DependentUpon>ScoringManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditPost.ascx.cs">
+      <DependentUpon>EditPost.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Common\Constants.cs" />
+    <Compile Include="Components\Common\Links.cs" />
+    <Compile Include="Components\Common\UIEventArgs.cs" />
+    <Compile Include="Components\Common\UIListEventArgs.cs" />
+    <Compile Include="Components\Common\Utils.cs" />
+    <Compile Include="Components\Controllers\IDnnqaController.cs" />
+    <Compile Include="Components\Controllers\DnnqaController.cs" />
+    <Compile Include="Components\Entities\CommentInfo.cs" />
+    <Compile Include="Components\Entities\ModerationLogInfo.cs" />
+    <Compile Include="Components\Entities\UserScoreInfo.cs" />
+    <Compile Include="Components\Entities\PostHistoryInfo.cs" />
+    <Compile Include="Components\Entities\QuestionServiceInfo.cs" />
+    <Compile Include="Components\Entities\QuestionInfo.cs" />
+    <Compile Include="Components\Entities\SettingInfo.cs" />
+    <Compile Include="Components\Entities\SubscriptionInfo.cs" />
+    <Compile Include="Components\Entities\TermHistoryInfo.cs" />
+    <Compile Include="Components\Entities\TermInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Entities\UserScoreLogInfo.cs" />
+    <Compile Include="Components\Entities\UtilityInfo.cs" />
+    <Compile Include="Components\Entities\VoteInfo.cs" />
+    <Compile Include="Components\Entities\PostInfo.cs" />
+    <Compile Include="Components\Models\QuestionModel.cs" />
+    <Compile Include="Components\Models\PrivilegeModel.cs" />
+    <Compile Include="Components\Models\PostHistoryModel.cs" />
+    <Compile Include="Components\Models\EditTermModel.cs" />
+    <Compile Include="Components\Models\TagHistoryModel.cs" />
+    <Compile Include="Components\Models\SubscriptionsModel.cs" />
+    <Compile Include="Components\Models\TagDetailModel.cs" />
+    <Compile Include="Components\Models\AskQuestionModel.cs" />
+    <Compile Include="Components\Models\BrowseModel.cs" />
+    <Compile Include="Components\Models\DispatchModel.cs" />
+    <Compile Include="Components\Models\HomeModel.cs" />
+    <Compile Include="Components\Models\TagListModel.cs" />
+    <Compile Include="Components\Presenters\QuestionPresenter.cs" />
+    <Compile Include="Components\Presenters\PrivilegePresenter.cs" />
+    <Compile Include="Components\Presenters\PostHistoryPresenter.cs" />
+    <Compile Include="Components\Presenters\EditTermPresenter.cs" />
+    <Compile Include="Components\Presenters\TagHistoryPresenter.cs" />
+    <Compile Include="Components\Presenters\SubscriptionsPresenter.cs" />
+    <Compile Include="Components\Presenters\TagDetailPresenter.cs" />
+    <Compile Include="Components\Presenters\TagListPresenter.cs" />
+    <Compile Include="Components\Presenters\AskQuestionPresenter.cs" />
+    <Compile Include="Components\Presenters\QAServicePresenter.cs" />
+    <Compile Include="Components\Presenters\BrowsePresenter.cs" />
+    <Compile Include="Components\Presenters\DispatchPresenter.cs" />
+    <Compile Include="Components\Presenters\HomePresenter.cs" />
+    <Compile Include="Components\Views\IPrivilegeView.cs" />
+    <Compile Include="Components\Views\IPostHistoryView.cs" />
+    <Compile Include="Components\Views\IEditTermView.cs" />
+    <Compile Include="Components\Views\ITagHistoryView.cs" />
+    <Compile Include="Components\Views\ISubscriptionsView.cs" />
+    <Compile Include="Components\Views\ITagDetailView.cs" />
+    <Compile Include="Components\Views\ITagListView.cs" />
+    <Compile Include="Components\Views\IQaServiceView.cs" />
+    <Compile Include="Controls\Tags.cs" />
+    <Compile Include="Controls\HeaderNav.ascx.cs">
+      <DependentUpon>HeaderNav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HeaderNav.ascx.designer.cs">
+      <DependentUpon>HeaderNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditPost.ascx.designer.cs">
+      <DependentUpon>EditPost.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Privilege.ascx.cs">
+      <DependentUpon>Privilege.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Privilege.ascx.designer.cs">
+      <DependentUpon>Privilege.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PostHistory.ascx.cs">
+      <DependentUpon>PostHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostHistory.ascx.designer.cs">
+      <DependentUpon>PostHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTerm.ascx.cs">
+      <DependentUpon>EditTerm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTerm.ascx.designer.cs">
+      <DependentUpon>EditTerm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\Sitemap\Core.cs" />
+    <Compile Include="Question.ascx.designer.cs">
+      <DependentUpon>Question.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TagHistory.ascx.cs">
+      <DependentUpon>TagHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagHistory.ascx.designer.cs">
+      <DependentUpon>TagHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\Data\SqlDataProvider\SqlDataProvider.cs" />
+    <Compile Include="Subscriptions.ascx.cs">
+      <DependentUpon>Subscriptions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subscriptions.ascx.designer.cs">
+      <DependentUpon>Subscriptions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TagDetail.ascx.cs">
+      <DependentUpon>TagDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagDetail.ascx.designer.cs">
+      <DependentUpon>TagDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Browse.ascx.designer.cs">
+      <DependentUpon>Browse.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TagList.ascx.cs">
+      <DependentUpon>TagList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TagList.ascx.designer.cs">
+      <DependentUpon>TagList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\Data\IDataProvider.cs" />
+    <Compile Include="Components\Views\IQuestionView.cs" />
+    <Compile Include="Components\Views\IAskQuestionView.cs" />
+    <Compile Include="Components\Views\IBrowseView.cs" />
+    <Compile Include="Components\Views\IDispatchView.cs" />
+    <Compile Include="Components\Views\IHomeView.cs" />
+    <Compile Include="Question.ascx.cs">
+      <DependentUpon>Question.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Voting.cs" />
+    <Compile Include="Qa.asmx.cs">
+      <DependentUpon>Qa.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AskQuestion.ascx.cs">
+      <DependentUpon>AskQuestion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AskQuestion.ascx.designer.cs">
+      <DependentUpon>AskQuestion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Browse.ascx.cs">
+      <DependentUpon>Browse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dispatch.ascx.cs">
+      <DependentUpon>Dispatch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dispatch.ascx.designer.cs">
+      <DependentUpon>Dispatch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.ascx.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.ascx.designer.cs">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.ascx.cs">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.ascx.designer.cs">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PrivilegeManager.ascx" />
+    <Content Include="Profile.ascx" />
+    <Content Include="ScoringManager.ascx" />
+    <Content Include="EditPost.ascx" />
+    <Content Include="js\BadgeManager.js" />
+    <Content Include="js\jquery.qaplaceholder.js" />
+    <Content Include="js\jquery.qatooltip.js" />
+    <Content Include="js\jquery.smartWizard-2.0.js" />
+    <Content Include="js\jquery.tagify.js" />
+    <Content Include="Question.ascx" />
+    <Content Include="Controls\HeaderNav.ascx" />
+    <Content Include="Privilege.ascx" />
+    <Content Include="PostHistory.ascx" />
+    <Content Include="EditTerm.ascx" />
+    <Content Include="TagHistory.ascx" />
+    <Content Include="Subscriptions.ascx" />
+    <Content Include="TagDetail.ascx" />
+    <Content Include="TagList.ascx" />
+    <Content Include="AskQuestion.ascx" />
+    <Content Include="Qa.asmx" />
+    <Content Include="Browse.ascx" />
+    <Content Include="Dispatch.ascx" />
+    <Content Include="Documentation\License.txt" />
+    <Content Include="Documentation\ReleaseNotes.txt" />
+    <Content Include="Home.ascx" />
+    <Content Include="module.css" />
+    <Content Include="Settings.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DNNQA.dnn">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Providers\Data\SqlDataProvider\01.00.00.SqlDataProvider" />
+    <None Include="Providers\Data\SqlDataProvider\01.00.01.SqlDataProvider" />
+    <None Include="Providers\Data\SqlDataProvider\01.00.02.SqlDataProvider" />
+    <None Include="Providers\Data\SqlDataProvider\01.00.03.SqlDataProvider" />
+    <None Include="Providers\Data\SqlDataProvider\01.01.00.SqlDataProvider" />
+    <None Include="Providers\Data\SqlDataProvider\01.01.01.SqlDataProvider" />
+    <None Include="Providers\Data\SqlDataProvider\Uninstall.SqlDataProvider" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Dispatch.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Settings.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\AskQuestion.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Home.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Browse.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Question.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\SharedResources.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\TagList.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\App_LocalResources\HeaderNav.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Subscriptions.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\TagHistory.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\EditTerm.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Privilege.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\EditPost.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Badge.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\BadgeManager.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\ScoringManager.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PrivilegeManager.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Profile.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="App_LocalResources\TagDetail.ascx.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <Extension>zip</Extension>
+    <DNNFileName>DNNQA</DNNFileName>
+    <PackageName>DNNQA</PackageName>
+    <MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\BuildScripts</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+  <Import Project="BuildScripts\ModulePackage.Targets" />
+  <Target Name="AfterBuild" DependsOnTargets="PackageModule">
+  </Target>
+</Project>
