@@ -20,12 +20,11 @@
 
 using System;
 using System.Linq;
-using System.Web.Mvc;
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Social.Notifications;
-using DotNetNuke.Web.Services;
+using DotNetNuke.Web.Api;
 
 namespace DotNetNuke.DNNQA.Components.Services
 {
@@ -34,7 +33,7 @@ namespace DotNetNuke.DNNQA.Components.Services
     //[SupportedModules("Social Events")]
     [DnnAuthorize]
     [ValidateAntiForgeryToken]
-    public class SocialEventServiceController : DnnController, IServiceRouteMapper
+    public class SocialEventServiceController : IServiceRouteMapper
     {
 
         #region Explicit Interface Methods
@@ -42,7 +41,7 @@ namespace DotNetNuke.DNNQA.Components.Services
         public void RegisterRoutes(IMapRoute mapRouteManager)
         {
 
-            mapRouteManager.MapRoute("DNNQA", "{controller}.ashx/{action}", new[] { "DotNetNuke.DNNQA.Components.Services" });
+            mapRouteManager.MapHttpRoute("DNNQA", "default", "{controller}/{action}", new[] { "DotNetNuke.DNNQA.Components.Services" });
         }
 
         #endregion
@@ -57,58 +56,10 @@ namespace DotNetNuke.DNNQA.Components.Services
                 | PortalSecurity.FilterFlag.NoMarkup);
         }
 
-        //private void ParseKey(string key)
-        //{
-        //    var keys = key.Split(Convert.ToChar(":"));
-        //    // 0 is content type string, to ensure unique key
-        //    _eventId = int.Parse(keys[1]);
-        //    _groupId = int.Parse(keys[2]);
-        //    _tabId = int.Parse(keys[3]);
-        //}
-
         #endregion
 
         #region Public Methods
 
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult UpdateAttendStatus(int portalId, int tabId, int groupId, int eventId, int status)
-        {
-            //var controller = new SocialEventsController();
-            //var @event = controller.GetEvent(
-            //    eventId, UserInfo.UserID, UserInfo.Profile.PreferredTimeZone);
-            //if (@event == null) return Json(new { Result = "success" });
-
-            //var objGuest = new EventGuestInfo
-            //{
-            //    EventId = @event.EventId,
-            //    UserId = UserInfo.UserID,
-            //    Email = UserInfo.Email,
-            //    InvitedOnDate = @event.CreatedOnDate,
-            //    RepliedOnDate = DateTime.Now,
-            //    RSVPStatus = status
-            //};
-            //controller.UpdateGuestStatus(objGuest);
-
-            //var url = DotNetNuke.Common.Globals.NavigateURL(tabId, "", "eventid=" + eventId);
-            //if (groupId > Null.NullInteger) url = DotNetNuke.Common.Globals.NavigateURL(tabId, "", "eventid=" + eventId, "groupid=" + groupId);
-
-            //var cntJournal = new Journal();
-            //cntJournal.AddSocialEventAttendToJournal(objGuest, @event.Name, @event.GroupId, tabId, @event.PortalId, objGuest.UserId, url);
-
-            //// Notification Integration
-            //var notificationType = NotificationsController.Instance.GetNotificationType(Constants.NotificationEventInviteTypeName);
-            //var notificationKey = string.Format("{0}:{1}:{2}:{3}", Constants.ContentTypeName, @event.EventId, @event.GroupId, PortalSettings.ActiveTab.TabID);
-            //var objNotify = NotificationsController.Instance.GetNotificationByContext(notificationType.NotificationTypeId, notificationKey).SingleOrDefault();
-
-            //if (objNotify != null)
-            //{
-            //    NotificationsController.Instance.DeleteNotificationRecipient(objNotify.NotificationID, UserInfo.UserID);
-            //}
-
-            var response = new { Value = eventId, Result = "success" };
-
-            return Json(response);
-        }
 
         #endregion
 
