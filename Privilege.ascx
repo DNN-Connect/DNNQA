@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="Privilege.ascx.cs" Inherits="DotNetNuke.DNNQA.Privilege" %>
 <%@ Import Namespace="DotNetNuke.Services.Localization" %>
-<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web.Deprecated" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <%@ Register TagPrefix="dqa" TagName="HeaderNav" Src="~/DesktopModules/DNNQA/Controls/HeaderNav.ascx" %>
 <dqa:HeaderNav ID="dgqHeaderNav" runat="server" />
 <div class="qaPrivilege dnnForm">

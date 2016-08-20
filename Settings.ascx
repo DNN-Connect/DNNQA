@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="false" Inherits="DotNetNuke.DNNQA.Settings" Codebehind="Settings.ascx.cs" %>
 <%@ Register TagPrefix="dnn" TagName="label" Src="~/controls/LabelControl.ascx" %>
 <%@ Import Namespace="DotNetNuke.Services.Localization" %>
-<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web.Deprecated" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <div class="dnnForm dnnQASettings dnnClear" id="dnnQASettings">
 	<asp:Panel id="pnlNormalSettings" runat="server">
 	   <div class="dnnFormExpandContent"><a href=""><%=Localization.GetString("ExpandAll", Localization.SharedResourceFile)%></a></div>

@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="TagHistory.ascx.cs" Inherits="DotNetNuke.DNNQA.TagHistory" %>
 <%@ Import Namespace="DotNetNuke.DNNQA.Components.Common" %>
 <%@ Import Namespace="DotNetNuke.Services.Localization" %>
-<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web.Deprecated" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <%@ Register TagPrefix="dqa" TagName="HeaderNav" Src="~/DesktopModules/DNNQA/Controls/HeaderNav.ascx" %>
 <dqa:HeaderNav ID="dgqHeaderNav" runat="server" />
 <div class="dnnForm qaTagHistory" id="qaTagHistory">

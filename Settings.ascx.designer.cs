@@ -28,7 +28,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblFromEmail;
+        protected global::System.Web.UI.UserControl dnnlblFromEmail;
         
         /// <summary>
         /// txtbxFromEmail control.
@@ -46,7 +46,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblQuestionEmailTemplate;
+        protected global::System.Web.UI.UserControl dnnlblQuestionEmailTemplate;
         
         /// <summary>
         /// txtbxQuestionEmailTemplate control.
@@ -64,7 +64,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblAnswerEmailTemplate;
+        protected global::System.Web.UI.UserControl dnnlblAnswerEmailTemplate;
         
         /// <summary>
         /// txtAnswerEmailTemplate control.
@@ -82,7 +82,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblCommentEmailTemplate;
+        protected global::System.Web.UI.UserControl dnnlblCommentEmailTemplate;
         
         /// <summary>
         /// txtbxCommentEmailTemplate control.
@@ -100,7 +100,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblSummaryEmailTemplate;
+        protected global::System.Web.UI.UserControl dnnlblSummaryEmailTemplate;
         
         /// <summary>
         /// txtbxSummaryEmailTemplate control.
@@ -118,7 +118,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblMinTitleChars;
+        protected global::System.Web.UI.UserControl dnnlblMinTitleChars;
         
         /// <summary>
         /// dntxtbxMinTitleChars control.
@@ -136,7 +136,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblMinBodyChars;
+        protected global::System.Web.UI.UserControl dnnlblMinBodyChars;
         
         /// <summary>
         /// dntxtbxMinBodyChars control.
@@ -154,7 +154,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblMaxTags;
+        protected global::System.Web.UI.UserControl dnnlblMaxTags;
         
         /// <summary>
         /// dntxtbxMaxTags control.
@@ -172,7 +172,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblVocabRoot;
+        protected global::System.Web.UI.UserControl dnnlblVocabRoot;
         
         /// <summary>
         /// ddlVocabRoot control.
@@ -190,7 +190,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblAutoApprove;
+        protected global::System.Web.UI.UserControl dnnlblAutoApprove;
         
         /// <summary>
         /// chkAutoApprove control.
@@ -208,7 +208,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblHomePageSize;
+        protected global::System.Web.UI.UserControl dnnlblHomePageSize;
         
         /// <summary>
         /// dntHomePageSize control.
@@ -226,7 +226,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblHomeTagSize;
+        protected global::System.Web.UI.UserControl dnnlblHomeTagSize;
         
         /// <summary>
         /// dntHomeTagSize control.
@@ -244,7 +244,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblHomeTagUsageType;
+        protected global::System.Web.UI.UserControl dnnlblHomeTagUsageType;
         
         /// <summary>
         /// ddlHomeTagUsageType control.
@@ -262,7 +262,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblBrowseQPageSize;
+        protected global::System.Web.UI.UserControl dnnlblBrowseQPageSize;
         
         /// <summary>
         /// dntBrowseQPageSize control.
@@ -280,7 +280,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblAnswerPageSize;
+        protected global::System.Web.UI.UserControl dnnlblAnswerPageSize;
         
         /// <summary>
         /// dnntAnswerPageSize control.
@@ -298,7 +298,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblMaxTagsTags;
+        protected global::System.Web.UI.UserControl dnnlblMaxTagsTags;
         
         /// <summary>
         /// dnntMaxTagsTags control.
@@ -316,7 +316,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblNameFormat;
+        protected global::System.Web.UI.UserControl dnnlblNameFormat;
         
         /// <summary>
         /// ddlNameFormat control.
@@ -334,7 +334,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblTagHistory;
+        protected global::System.Web.UI.UserControl dnnlblTagHistory;
         
         /// <summary>
         /// dntxtbxTagHistory control.
@@ -352,7 +352,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblFacebookAppId;
+        protected global::System.Web.UI.UserControl dnnlblFacebookAppId;
         
         /// <summary>
         /// txtbxFacebookAppId control.
@@ -370,7 +370,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblEnablePlusOne;
+        protected global::System.Web.UI.UserControl dnnlblEnablePlusOne;
         
         /// <summary>
         /// chkEnablePlusOne control.
@@ -388,7 +388,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblEnableTwitter;
+        protected global::System.Web.UI.UserControl dnnlblEnableTwitter;
         
         /// <summary>
         /// chkEnableTwitter control.
@@ -406,7 +406,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblEnableLinkedIn;
+        protected global::System.Web.UI.UserControl dnnlblEnableLinkedIn;
         
         /// <summary>
         /// chkEnableLinkedIn control.
@@ -424,7 +424,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblEnableRSS;
+        protected global::System.Web.UI.UserControl dnnlblEnableRSS;
         
         /// <summary>
         /// chkEnableRSS control.
@@ -442,7 +442,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblQCCVC;
+        protected global::System.Web.UI.UserControl dnnlblQCCVC;
         
         /// <summary>
         /// dntbQCCVC control.
@@ -460,7 +460,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblQCWD;
+        protected global::System.Web.UI.UserControl dnnlblQCWD;
         
         /// <summary>
         /// dntbQCWD control.
@@ -478,7 +478,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblQFHRC;
+        protected global::System.Web.UI.UserControl dnnlblQFHRC;
         
         /// <summary>
         /// dntbQFHRC control.
@@ -496,7 +496,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblPCVWM;
+        protected global::System.Web.UI.UserControl dnnlblPCVWM;
         
         /// <summary>
         /// dntbPCVWM control.
@@ -514,7 +514,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblPFCC;
+        protected global::System.Web.UI.UserControl dnnlblPFCC;
         
         /// <summary>
         /// dntbPFCC control.
@@ -532,7 +532,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblPFWH;
+        protected global::System.Web.UI.UserControl dnnlblPFWH;
         
         /// <summary>
         /// dntbPFWH control.
@@ -550,7 +550,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblTCWD;
+        protected global::System.Web.UI.UserControl dnnlblTCWD;
         
         /// <summary>
         /// dntbTCWD control.
@@ -568,7 +568,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblTFWH;
+        protected global::System.Web.UI.UserControl dnnlblTFWH;
         
         /// <summary>
         /// dntbTFWH control.
@@ -586,7 +586,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblTFCC;
+        protected global::System.Web.UI.UserControl dnnlblTFCC;
         
         /// <summary>
         /// dntbTFCC control.
@@ -604,7 +604,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblTSAC;
+        protected global::System.Web.UI.UserControl dnnlblTSAC;
         
         /// <summary>
         /// dntbTSAC control.
@@ -622,7 +622,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblTSRC;
+        protected global::System.Web.UI.UserControl dnnlblTSRC;
         
         /// <summary>
         /// dntbTSRC control.
@@ -640,7 +640,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblTSMC;
+        protected global::System.Web.UI.UserControl dnnlblTSMC;
         
         /// <summary>
         /// dntbTSMC control.
@@ -658,7 +658,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblUCVC;
+        protected global::System.Web.UI.UserControl dnnlblUCVC;
         
         /// <summary>
         /// dntbUCVC control.
@@ -676,7 +676,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblUFPMC;
+        protected global::System.Web.UI.UserControl dnnlblUFPMC;
         
         /// <summary>
         /// dntbUFPMC control.
@@ -694,7 +694,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblFPSC;
+        protected global::System.Web.UI.UserControl dnnlblFPSC;
         
         /// <summary>
         /// dntbFPSC control.
@@ -721,7 +721,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblUTSCMAC;
+        protected global::System.Web.UI.UserControl dnnlblUTSCMAC;
         
         /// <summary>
         /// dntbUTSCMAC control.
@@ -748,7 +748,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblUTSVMASC;
+        protected global::System.Web.UI.UserControl dnnlblUTSVMASC;
         
         /// <summary>
         /// dntbUTSVMASC control.
@@ -766,7 +766,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblUUVAC;
+        protected global::System.Web.UI.UserControl dnnlblUUVAC;
         
         /// <summary>
         /// dntbUUVAC control.
@@ -784,7 +784,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblUUVQC;
+        protected global::System.Web.UI.UserControl dnnlblUUVQC;
         
         /// <summary>
         /// dntbUUVQC control.
@@ -802,7 +802,7 @@ namespace DotNetNuke.DNNQA {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl dnnlblQHMS;
+        protected global::System.Web.UI.UserControl dnnlblQHMS;
         
         /// <summary>
         /// dntbQHMS control.

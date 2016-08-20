@@ -26,6 +26,8 @@ using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Services.Social.Notifications;
 using DotNetNuke.Web.Services;
+using DotNetNuke.Web.Api;
+using DotNetNuke.Web.Mvc.Framework.Controllers;
 
 namespace DotNetNuke.DNNQA.Components.Services
 {
@@ -33,7 +35,7 @@ namespace DotNetNuke.DNNQA.Components.Services
     [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
     //[SupportedModules("Social Events")]
     [DnnAuthorize]
-    [ValidateAntiForgeryToken]
+    [Web.Mvc.Framework.ActionFilters.ValidateAntiForgeryToken]
     public class SocialEventServiceController : DnnController, IServiceRouteMapper
     {
 
@@ -42,7 +44,7 @@ namespace DotNetNuke.DNNQA.Components.Services
         public void RegisterRoutes(IMapRoute mapRouteManager)
         {
 
-            mapRouteManager.MapRoute("DNNQA", "{controller}.ashx/{action}", new[] { "DotNetNuke.DNNQA.Components.Services" });
+            mapRouteManager.MapHttpRoute("DNNQA", "default", "{controller}.ashx/{action}", new[] { "DotNetNuke.DNNQA.Components.Services" });
         }
 
         #endregion

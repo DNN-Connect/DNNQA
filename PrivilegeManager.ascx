@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="PrivilegeManager.ascx.cs" Inherits="DotNetNuke.DNNQA.PrivilegeManager" %>
 <%@ Import Namespace="DotNetNuke.Services.Localization" %>
-<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web.Deprecated" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="label" Src="~/controls/LabelControl.ascx" %>
 <div class="qaPrivilegeManager dnnForm dnnClear" id="qaPrivilegeManager">
 	<h2 id="dnnSitePanel-qaPrivileges" class="dnnFormSectionHead"><%= Localization.GetString("PrivilegeLevels", LocalResourceFile) %></h2>
