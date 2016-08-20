@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="false" CodeBehind="Profile.ascx.cs" Inherits="DotNetNuke.DNNQA.Profile" %>
 <%@ Register TagPrefix="dqa" Assembly="DotNetNuke.Modules.DNNQA" Namespace="DotNetNuke.DNNQA.Controls" %>
-<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web.Deprecated" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <div class="dnnForm qaProfile dnnClear" id="qaProfile">
 	<ul class="dnnAdminTabNav dnnClear">
 		<li><a href="#qaMyQuestions"><%=LocalizeString("MyQuestions") %></a></li>

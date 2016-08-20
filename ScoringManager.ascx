@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="false" CodeBehind="ScoringManager.ascx.cs" Inherits="DotNetNuke.DNNQA.ScoringManager" %>
 <%@ Import Namespace="DotNetNuke.Services.Localization" %>
-<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" %>
+<%@ Register TagPrefix="dnnweb" Assembly="DotNetNuke.Web.Deprecated" Namespace="DotNetNuke.Web.UI.WebControls" %>
 <%@ Register TagPrefix="dnn" TagName="label" Src="~/controls/LabelControl.ascx" %>
 <div class="qaScoringManager dnnForm dnnClear" id="qaScoringManager">
 	<h2 id="dnnSitePanel-qaScoring" class="dnnFormSectionHead"><%= Localization.GetString("ScoringValues", LocalResourceFile) %></h2>
